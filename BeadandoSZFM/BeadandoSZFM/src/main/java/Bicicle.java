@@ -6,19 +6,29 @@ public class Bicicle{
     private int cost; //az ára óránként
     private LocalTime StartTime;
     private int timer; //megkezdett fél órák
-    private int service; //időből számolt karbantartás;
+    private int service = 100; //időből számolt karbantartás;
     private int available; // 1 elérhető, 0 nem
     private boolean type; //1 elektromos, 0 sima
+    private int charge = 100;
     private List<String> users; //Azoknak a listája akik használták
 
-    public Bicicle(int bicicleID, int cost, int timer, int service, int available, boolean type, List<String> users) {
+    public Bicicle(int bicicleID, int cost, int timer, int service, int available, boolean type, int charge ,List<String> users) {
         this.bicicleID = bicicleID;
         this.cost = cost;
         this.timer = timer;
         this.service = service;
         this.available = available;
         this.type = type;
+        this.charge = charge;
         this.users = users;
+    }
+
+    public int getCharge() {
+        return charge;
+    }
+
+    public void setCharge(int charge) {
+        this.charge = charge;
     }
 
     public LocalTime getStartTime() {
@@ -105,11 +115,23 @@ public class Bicicle{
         setTimer(kul);
     }
 
-    //private Users user;
-    Users user = new Users(123,"asd","asd");
-    public Users getUser() {
-        return user;
+    public void checkCharge()
+    {
+        setCharge(getCharge()-(getTimer()*random()));
     }
+
+    public void checkService()
+    {
+        setService(getService()-getTimer()*3);
+    }
+
+    public int random()
+    {
+        int rand = (int)(1 + (Math.random() * (7 - 1)));
+        return rand;
+    }
+
+
 }
 
 
