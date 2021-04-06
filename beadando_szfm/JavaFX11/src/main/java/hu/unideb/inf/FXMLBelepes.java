@@ -8,34 +8,6 @@ import javafx.scene.control.TextField;
 
 public class FXMLBelepes {
 
-    public TextField getLogin_username() {
-        return login_username;
-    }
-
-    public TextField getRegistration_username() {
-        return registration_username;
-    }
-
-    public PasswordField getLogin_password() {
-        return login_password;
-    }
-
-    public PasswordField getRegistration_password() {
-        return registration_password;
-    }
-
-    public PasswordField getRegistration_password2() {
-        return registration_password2;
-    }
-
-    public Label getLogin_error() {
-        return login_error;
-    }
-
-    public Label getRegistration_error() {
-        return registration_error;
-    }
-
     @FXML
     private TextField login_username;
 
@@ -59,11 +31,16 @@ public class FXMLBelepes {
 
     @FXML
     void handleBejelentkezekButtonPushed(ActionEvent event) {
-        System.out.println(getLogin_password());
+        String login_user_name = login_username.getText();
+        String jelszo = login_password.getText();
+        System.out.println(login_user_name);
+        System.out.println();
+
     }
 
     @FXML
     void handleRegisztrálokButtonPushed(ActionEvent event) {
-        System.out.println(getRegistration_username().toString());
+        String registration_user_name = registration_username.getText();
+        System.out.println(registration_user_name);
     }
 }
