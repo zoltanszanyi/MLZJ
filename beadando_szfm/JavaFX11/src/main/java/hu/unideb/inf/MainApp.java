@@ -17,6 +17,7 @@ public class MainApp extends Application {
         stage.setTitle("Elso oldal");
         stage.setScene(scene);
         stage.show();
+
     }
 
     /**
@@ -31,4 +32,13 @@ public class MainApp extends Application {
         launch(args);
     }
 
+    public boolean registerPw(String pw1,String pw2) {
+        if(pw1.equals(pw2)){
+            return true;
+        }
+        return false;
+    }
+
 }
+
+
