@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 
 import java.time.LocalTime;
@@ -51,13 +52,6 @@ public class FXMLBelepes {
         pwIsExists = false;
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
-        System.out.println(login_user_name);
-
-        System.out.println("jelszóóó");
-        login_error.setText("Helló");
-
-        System.out.println(jelszo);
-
 
         /*              Létezik-e ilyen felhasználó                      */
         for (Users user: usersList) {//végigmeghy a lista elemein
@@ -67,14 +61,15 @@ public class FXMLBelepes {
                 pwIsExists = true;
         }
         if(emailIsExists && pwIsExists) {
-            System.out.println("Sikeres belépés");
+            login_error.setTextFill(Color.color(0,1,0));
             login_error.setText("Sikeres belépés");
         }else if(emailIsExists && !pwIsExists){
-            System.out.println("Rossz jelszót adtál meg");
+            login_error.setTextFill(Color.color(1,0,0));
             login_error.setText("Rossz jelszót adtál meg");
         }else
-            System.out.println("Nincs ilyen felhasználó-jelszó páros");
+            login_error.setTextFill(Color.color(1,0,0));
             login_error.setText("Nincs ilyen felhasználó-jelszó páros");
+
         /*--------------------------------------------------------- */
 
     }
@@ -85,15 +80,21 @@ public class FXMLBelepes {
         String pw2 = registration_password2.getText();
         Users users = new Users();
         Bicicle bic = null;
-        if (app.registerPw(pw1, pw2) && !emailIsExists && users.checkPassword(pw1))
-            registration_error.setText("Sikeres regisztráció!");
-        else if(!app.registerPw(pw1, pw2))
+        if (app.registerPw(pw1, pw2) && !emailIsExists && users.checkPassword(pw1)){
+            registration_error.setTextFill(Color.color(0,1,0));
+            registration_error.setText("Sikeres regisztráció!");}
+        else if(!app.registerPw(pw1, pw2)) {
+            registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott jelszavak NEM egyeznek meg!");
-        else if(!users.checkPassword(pw1))
+        }
+        else if(!users.checkPassword(pw1)) {
+            registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott jelszó nem elég erős!");
-        else if(!emailIsExists)
+        }
+        else if(!emailIsExists) {
+            registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott E-mail már használatban van");
-
+        }
         registrationPwdReset();
         registrationPwd2Reset();
 
