@@ -25,25 +25,7 @@
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/BeadandoSZFM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Bicicle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/UsersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/SecondaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/resources/org/example/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/resources/org/example/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/target/classes/org/example/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/target/classes/org/example/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,5 +193,23 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="161" key="GridCell.Tab.0.bottom" timestamp="1617813771517">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="161" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771517" />
+    <state width="1323" height="161" key="GridCell.Tab.0.center" timestamp="1617813771516">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="161" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771516" />
+    <state width="1323" height="161" key="GridCell.Tab.0.left" timestamp="1617813771516">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="161" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771516" />
+    <state width="1323" height="161" key="GridCell.Tab.0.right" timestamp="1617813771517">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="161" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771517" />
   </component>
 </project>

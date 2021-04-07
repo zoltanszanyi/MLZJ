@@ -41,6 +41,7 @@ public class MainApp extends Application {
 
     public boolean checkEmailInUse(String a, String b)
     {
+        Users users = new Users();
         if(a.equals(b))
             return true;
         return false;
