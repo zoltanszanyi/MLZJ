@@ -80,13 +80,17 @@ public class FXMLBelepes {
         String pw2 = registration_password2.getText();
         /*                      Regisztráció mentése                        */
         if (app.registerPw(pw1, pw2) && !emailIsExists && users.checkPassword(pw1) && users.emailValidator(registration_username.getText())) {
+            registration_error.setTextFill(Color.color(0,1,0));
             registration_error.setText("Sikeres regisztráció!");
             usersList.add(new Users(bic.random(),registration_username.getText(),registration_password.getText()));
         }else if (!app.registerPw(pw1, pw2)){
+            registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott jelszavak NEM egyeznek meg!");
         } else if(!users.checkPassword(pw1)) {
+            registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott jelszó nem elég erős!");
         }else if(!emailIsExists) {
+            registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott E-mail már használatban van");
         }
         /*---------------------------------------------------------------------*/
