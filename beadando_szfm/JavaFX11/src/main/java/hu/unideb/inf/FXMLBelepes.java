@@ -64,7 +64,7 @@ public class FXMLBelepes {
             login_error.setText("Nincs ilyen felhasználó-jelszó páros");
         /*--------------------------------------------------------- */
 
-        /*              Acc hozzáadása                              */
+        /*              Acc hozzáadása
         if(users.checkPassword(registration_password.getText()) && !emailIsExists && !pwIsExists)
             usersList.add(new Users(bic.random()))
         /*--------------------------------------------------------- */
