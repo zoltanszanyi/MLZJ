@@ -7,13 +7,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 
 public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLBelepes.fxml"));
-        Scene scene = new Scene(loader.load());
+        Scene scene = new Scene((Parent) loader.load());
         stage.setTitle("Elso oldal");
         stage.setScene(scene);
         stage.show();
@@ -30,13 +34,29 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        FXMLBelepes belepes;
+        Users users;
+        ArrayList<Users> usersList = new ArrayList<>();
     }
+
+    public boolean checkEmailInUse(String a, String b)
+    {
+        if(a.equals(b))
+            return true;
+        return false;
+    }
+
 
     public boolean registerPw(String pw1,String pw2) {
         if(pw1.equals(pw2)){
             return true;
         }
         return false;
+    }
+
+    public void addAcc(String a, String b, String c)
+    {
+
     }
 
 }
