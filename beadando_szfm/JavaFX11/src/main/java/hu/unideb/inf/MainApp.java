@@ -54,11 +54,6 @@ public class MainApp extends Application {
         return false;
     }
 
-    public void addAcc(String a, String b, String c)
-    {
-
-    }
-
 }
 
 
