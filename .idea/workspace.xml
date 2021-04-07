@@ -3,28 +3,30 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainAppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/BeadandoSZFM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Bicicle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/UsersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/SecondaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/resources/org/example/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/resources/org/example/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/target/classes/org/example/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/target/classes/org/example/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -32,6 +34,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,13 +60,72 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="hu.unideb.inf" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MainAppTest.registerPwTest (1)">
+    <configuration name="MainAppTest.registerPwTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFX11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.inf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.inf" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.inf.MainAppTest" />
+      <option name="METHOD_NAME" value="registerPwTest(java.lang.String,java.lang.String,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainAppTest.registerPwTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFX11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.inf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.inf" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.inf.MainAppTest" />
+      <option name="METHOD_NAME" value="registerPwTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainAppTest.registerPwTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFX11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.inf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.inf" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.inf.MainAppTest" />
+      <option name="METHOD_NAME" value="registerPwTest2(java.lang.String,java.lang.String,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaFX11 [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -83,6 +151,13 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainAppTest.registerPwTest (1)" />
+        <item itemvalue="JUnit.MainAppTest.registerPwTest2" />
+        <item itemvalue="JUnit.MainAppTest.registerPwTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -94,6 +169,17 @@
       <updated>1617722172524</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617723126610">
@@ -108,39 +194,44 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617723504349" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1617801499435">
+    <state width="1323" height="161" key="GridCell.Tab.0.bottom" timestamp="1617807859389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1617726320835" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617801499435" />
+    <state width="1323" height="161" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617807859389" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617723730900" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1617801499435">
+    <state width="1323" height="161" key="GridCell.Tab.0.center" timestamp="1617807859388">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1617726320835" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617801499435" />
+    <state width="1323" height="161" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617807859388" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617723730900" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1617801499435">
+    <state width="1323" height="161" key="GridCell.Tab.0.left" timestamp="1617807859386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1617726320835" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617801499435" />
+    <state width="1323" height="161" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617807859386" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617723730900" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1617801499435">
+    <state width="1323" height="161" key="GridCell.Tab.0.right" timestamp="1617807859389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1617726320835" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617801499435" />
+    <state width="1323" height="161" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617807859389" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617723730900" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1617725118185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1617725118185" />
-    <state x="368" y="18" key="SettingsEditor" timestamp="1617725027421">
+    <state x="326" y="0" key="SettingsEditor" timestamp="1617807742415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="368" y="18" key="SettingsEditor/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1617725027421" />
+    <state x="326" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617807742415" />
     <state x="564" y="113" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617723776055" />
+    <state x="454" y="138" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1617805529711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="138" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617805529711" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1617790239071">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
