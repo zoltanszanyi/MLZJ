@@ -96,6 +96,7 @@ public class FXMLBelepes {
 
         registrationPwdReset();
         registrationPwd2Reset();
+        registrationUsernameReset();
 
     }
 
@@ -113,8 +114,6 @@ public class FXMLBelepes {
                 i = 1;
             }
         }
-
-
     }
 
         public void registrationErrorReset(){
@@ -123,11 +122,10 @@ public class FXMLBelepes {
         public void registrationPwdReset(){
             registration_password.setText(null);
         }
-
         public void registrationPwd2Reset(){
             registration_password2.setText(null);
         }
-
+        public void registrationUsernameReset(){registration_username.setText(null);}
         public TextField getLogin_username() {
             return login_username;
         }
