@@ -19,11 +19,11 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Belépés" GridPane.halignment="CENTER">
@@ -41,12 +41,12 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label fx:id="login_error" prefHeight="21.0" prefWidth="325.0" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <Label fx:id="login_error" prefHeight="81.0" prefWidth="255.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="registration_error" prefHeight="21.0" prefWidth="277.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+            <Label fx:id="registration_error" prefHeight="74.0" prefWidth="255.0" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                <font>
                   <Font size="15.0" />
                </font>
