@@ -23,28 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/BeadandoSZFM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Bicicle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/UsersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/java/org/example/SecondaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/resources/org/example/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/src/main/resources/org/example/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/target/classes/org/example/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeadandoSZFM/BeadandoSZFM/target/classes/org/example/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617722172524</updated>
       <workItem from="1617808699112" duration="647000" />
-      <workItem from="1617809360000" duration="3249000" />
+      <workItem from="1617809360000" duration="5110000" />
     </task>
     <servers />
   </component>
