@@ -12,6 +12,12 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class FXMLBelepes {
+    MainApp app = new MainApp();
+    Users users = new Users();
+    Bicicle bic = null;
+    ArrayList<Users> usersList = new ArrayList<>();
+    boolean emailIsExists = false;
+    boolean pwIsExists = false;
 
 
     @FXML
@@ -41,12 +47,8 @@ public class FXMLBelepes {
 
     @FXML
     void handleBejelentkezekButtonPushed(ActionEvent event) {
-        ArrayList<Users> usersList = new ArrayList<>();
-        boolean emailIsExists = false;
-        boolean pwIsExists = false;
-        MainApp app = new MainApp();
-        Users users = null;
-        Bicicle bic = null;
+        emailIsExists = false;
+        pwIsExists = false;
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
         System.out.println(login_user_name);
@@ -75,25 +77,22 @@ public class FXMLBelepes {
             login_error.setText("Nincs ilyen felhasználó-jelszó páros");
         /*--------------------------------------------------------- */
 
-        /*              Acc hozzáadása
-        if(users.checkPassword(registration_password.getText()) && !emailIsExists && !pwIsExists)
-            usersList.add(new Users(bic.random()))
-        /*--------------------------------------------------------- */
-
-
     }
 
     @FXML
     void handleRegisztrálokButtonPushed(ActionEvent event) {
         String pw1 = registration_password.getText();
         String pw2 = registration_password2.getText();
-        MainApp app = new MainApp();
-        if (app.registerPw(pw1, pw2)) {
+        Users users = new Users();
+        Bicicle bic = null;
+        if (app.registerPw(pw1, pw2) && !emailIsExists && users.checkPassword(pw1))
             registration_error.setText("Sikeres regisztráció!");
-
-        } else {
+        else if(!app.registerPw(pw1, pw2))
             registration_error.setText("Sikertelen regisztráció! A megadott jelszavak NEM egyeznek meg!");
-        }
+        else if(!users.checkPassword(pw1))
+            registration_error.setText("Sikertelen regisztráció! A megadott jelszó nem elég erős!");
+        else if(!emailIsExists)
+            registration_error.setText("Sikertelen regisztráció! A megadott E-mail már használatban van");
 
         registrationPwdReset();
         registrationPwd2Reset();

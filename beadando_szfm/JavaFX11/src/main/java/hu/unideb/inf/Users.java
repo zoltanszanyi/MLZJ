@@ -14,6 +14,9 @@ public class Users{
         this.password = password;
     }
 
+    public Users() {
+    }
+
     public int getUserID() {
         return userID;
     }
@@ -55,7 +58,7 @@ public class Users{
             kis = true;
         if (pw.matches("(?=.*[A-Z]).*"))//nagy betűk ellenőrzése
             nagy = true;
-        if (pw.matches("(?=.*[~!@#$%^&*()_-]).*"))//speciális karakterek ellenőrzése
+        if (pw.matches("(?=.*[~!@#+$%^&*()_-]).*"))//speciális karakterek ellenőrzése
             spec = true;
 
         if (nagy && szam && spec && kis && hossz)//ha mindegyik teljesül akkor egy igaz értéket ad vissza ha nem akkor hamisat
