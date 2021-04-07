@@ -23,8 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +160,7 @@
       <updated>1617722172524</updated>
       <workItem from="1617808699112" duration="647000" />
       <workItem from="1617809360000" duration="3249000" />
-      <workItem from="1617815109377" duration="703000" />
+      <workItem from="1617815109377" duration="1075000" />
     </task>
     <servers />
   </component>

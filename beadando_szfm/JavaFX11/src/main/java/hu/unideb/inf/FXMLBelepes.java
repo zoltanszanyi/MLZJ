@@ -61,20 +61,20 @@ public class FXMLBelepes {
 
         /*              Létezik-e ilyen felhasználó                      */
         for (Users user: usersList) {//végigmeghy a lista elemein
+            if(emailIsExists == true && pwIsExists == true)
+                break;
             if(app.checkEmailInUse(login_user_name, user.getEmail()))//megnézi hogy egyenlő-e a két string
                 emailIsExists = true;
-            if(app.checkEmailInUse(login_password.getText(), user.getPassword()))//megnézi hogy egyenlő-e a két string
+            if(login_password.getText().equals(user.getPassword()))//megnézi hogy egyenlő-e a két string
                 pwIsExists = true;
         }
         if(emailIsExists && pwIsExists) {
             System.out.println("Sikeres belépés");
             login_error.setText("Sikeres belépés");
-        }else if(emailIsExists && !pwIsExists){
-            System.out.println("Rossz jelszót adtál meg");
-            login_error.setText("Rossz jelszót adtál meg");
-        }else
-            System.out.println("Nincs ilyen felhasználó-jelszó páros");
-            login_error.setText("Nincs ilyen felhasználó-jelszó páros");
+        }else if(emailIsExists || pwIsExists){
+            System.out.println("Sikertelen belépés");
+            login_error.setText("Sikertelen belépés");
+        }
         /*--------------------------------------------------------- */
 
     }
