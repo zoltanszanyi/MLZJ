@@ -23,10 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,19 +71,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.MainAppTest.registerPwTest (1)">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainAppTest.registerPwTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFX11" />
       <extension name="coverage">
@@ -176,6 +162,7 @@
       <updated>1617722172524</updated>
       <workItem from="1617808699112" duration="647000" />
       <workItem from="1617809360000" duration="3249000" />
+      <workItem from="1617815109377" duration="703000" />
     </task>
     <servers />
   </component>
@@ -193,23 +180,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1323" height="161" key="GridCell.Tab.0.bottom" timestamp="1617813771517">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771517" />
-    <state width="1323" height="161" key="GridCell.Tab.0.center" timestamp="1617813771516">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771516" />
-    <state width="1323" height="161" key="GridCell.Tab.0.left" timestamp="1617813771516">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771516" />
-    <state width="1323" height="161" key="GridCell.Tab.0.right" timestamp="1617813771517">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617813771517" />
   </component>
 </project>

@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class FXMLBelepes {
     MainApp app = new MainApp();
     Users users = new Users();
-    Bicicle bic = null;
+    Bicicle bic = new Bicicle();
     ArrayList<Users> usersList = new ArrayList<>();
     boolean emailIsExists = false;
     boolean pwIsExists = false;
@@ -84,11 +84,12 @@ public class FXMLBelepes {
         String pw1 = registration_password.getText();
         String pw2 = registration_password2.getText();
         Users users = new Users();
-        Bicicle bic = null;
+        Bicicle bic = new Bicicle();
 
-        /*                      Regisztrációs hibakeresés                       */
+        /*                      Regisztrációs létrehozás                      */
         if (app.registerPw(pw1, pw2) && !emailIsExists && users.checkPassword(pw1) && users.emailValidator(registration_username.getText())) {
             registration_error.setText("Sikeres regisztráció!");
+            usersList.add(new Users(bic.random(),registration_username.getText(),registration_password.getText()));
         }else if (!app.registerPw(pw1, pw2)){
             registration_error.setText("Sikertelen regisztráció! A megadott jelszavak NEM egyeznek meg!");
         } else if(!users.checkPassword(pw1)) {
