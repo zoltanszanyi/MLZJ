@@ -38,7 +38,7 @@ public class MainApp extends Application {
         Users users;
         ArrayList<Users> usersList = new ArrayList<>();
     }
-
+    /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/
     public boolean checkEmailInUse(String a, String b)
     {
         if(a.equals(b))
@@ -46,7 +46,7 @@ public class MainApp extends Application {
         return false;
     }
 
-
+    /*--------- Ellenőrzi, hogy a jelszó használatban van-e már ---------*/
     public boolean registerPw(String pw1,String pw2) {
         if(pw1.equals(pw2)){
             return true;

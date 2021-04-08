@@ -104,6 +104,7 @@ public class FXMLBelepes {
         /*---------------------------------------------------------------------*/
         registrationPwdReset();
         registrationPwd2Reset();
+        registrationUsernameReset();
 
     }
 
@@ -135,7 +136,9 @@ public class FXMLBelepes {
         public void registrationPwd2Reset(){
             registration_password2.setText(null);
         }
-
+        public void registrationUsernameReset(){ //regisztráció után reseteli a usernamet
+            registration_username.setText(null);
+        }
         public TextField getLogin_username() {
             return login_username;
         }
