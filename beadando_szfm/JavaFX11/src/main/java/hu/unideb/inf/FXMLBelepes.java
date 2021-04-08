@@ -19,6 +19,7 @@ public class FXMLBelepes {
     ArrayList<Users> usersList = new ArrayList<>();
     boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
     boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
+    TextField textField = new TextField();
 
 
     @FXML
@@ -111,44 +112,38 @@ public class FXMLBelepes {
             registration_error.setText("Sikertelen regisztráció! A megadott E-mail már használatban van");
         }
         /*---------------------------------------------------------------------*/
+
+        registrationErrorReset();
         registrationPwdReset();
         registrationPwd2Reset();
         registrationUsernameReset();
     }
 
-    public void pause(int s){//teszt metódus a szüneteltetésre
-        int i = 0;
-        LocalTime startTime = LocalTime.now();
-        LocalTime deltaTime = startTime.plusSeconds(s);
-        String[] time1 = deltaTime.toString().split("[:.]");
-        while(true) {
-            if (i == 1) {
-                break;
-            }
-            String[] time2 = LocalTime.now().toString().split("[:.]");
-            if ((time2[2]).equals(time1[2])) {
-                i = 1;
-            }
-        }
 
+        /*------ reseteli a regisztráció error üzenetet ha valamelyik textfieldbe kattintok ------*/
+        public void registrationErrorReset(){
+            registration_username.setOnMouseClicked(e ->{
+                registration_error.setText(null);
+            });
+            registration_password.setOnMouseClicked(e ->{
+                registration_error.setText(null);
+            });
+            registration_password2.setOnMouseClicked(e ->{
+                registration_error.setText(null);
+            });
 
-    }
-
-        public void registrationErrorReset(){//reseteli az error üzenetet
-            registration_error.setText(null);
         }
         public void registrationPwdReset(){//reseteli az reg pw-t üzenetet
             registration_password.setText(null);
         }
-
         public void registrationPwd2Reset(){//reseteli az reg pw ellenőrzőjét üzenetet
             registration_password2.setText(null);
         }
-    public void registrationUsernameReset(){ //regisztráció után reseteli a usernamet
+        public void registrationUsernameReset(){ //regisztráció után reseteli a usernamet
         registration_username.setText(null);
     }
 
-    }
+}
 
 
 
