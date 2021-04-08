@@ -1,0 +1,4 @@
+.bodybackground{
+    -fx-background-image: url("unibike.png");
+    -fx-background-size: 100% 100%;
+}
