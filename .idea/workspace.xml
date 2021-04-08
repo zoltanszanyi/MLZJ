@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acd83ba8-26e5-4148-92da-875aadc40ffc" name="Default Changelist" comment="" />
+    <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Users.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,23 +195,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1323" height="149" key="GridCell.Tab.0.bottom" timestamp="1617914658937">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="149" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617914658937" />
-    <state width="1323" height="149" key="GridCell.Tab.0.center" timestamp="1617914658937">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="149" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617914658937" />
-    <state width="1323" height="149" key="GridCell.Tab.0.left" timestamp="1617914658937">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="149" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617914658937" />
-    <state width="1323" height="149" key="GridCell.Tab.0.right" timestamp="1617914658937">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="149" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1617914658937" />
   </component>
 </project>
