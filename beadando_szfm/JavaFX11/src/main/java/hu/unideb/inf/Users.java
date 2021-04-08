@@ -66,11 +66,14 @@ public class Users{
         else
             return false;
     }
-
-    private static final String EMAIL_REGEX = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
+    private static final String EMAIL_REGEX = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"" +
+            "(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")" +
+            "@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?" +
+            "[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\" +
+            "x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
     private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
 
-/*--------- Ellenőrzi, hogy az Email helyes formátumú-e ---------*/
+
     public boolean emailValidator(String email){
 
         if (email == null) {
@@ -80,45 +83,4 @@ public class Users{
         Matcher matcher = EMAIL_PATTERN.matcher(email);
         return matcher.matches();
     }
-
-
-    /*
-    public String checkPassword(String pw)
-    {
-        boolean nagy = false;
-        String nagyB = "Nincs benne nagy betű";
-        boolean szam = false;
-        String szamN = "Nincs benne szám";
-        boolean spec = false;
-        String specC = "Nincs benne speciális karakter";
-        boolean kis = false;
-        String kisB = "Nincs benne kis betű";
-        boolean hossz = false;
-        String hossza = "Nem elegendő a hossza";
-
-        if(pw.length() >= 7)//jelszó hosszának ellenőrzése
-            hossz = true;
-        if(pw.matches("(?=.*[0-9]).*"))//szám ellenőrzése
-            szam = true;
-        if(pw.matches("(?=.*[a-z]).*"))//kis betük ellenőrzése
-            kis = true;
-        if(pw.matches("(?=.*[A-Z]).*"))//nagy betűk ellenőrzése
-            nagy = true;
-        if(pw.matches("(?=.*[~!@#$%^&*()_-]).*"))//speciális karakterek ellenőrzése
-            spec = true;
-
-        if(nagy && szam && spec && kis && hossz)//ha mindegyik teljesül akkor 'Megfelel' értéket ad vissza ha nem akkor kiiírja a hibát
-            return "Megfelel";
-        else if(nagy)
-            return nagyB;
-        else if(szam)
-            return szamN;
-        else if(spec)
-            return specC;
-        else if(kis)
-            return kisB;
-        else
-            return hossza;
-   }
-*/
 }

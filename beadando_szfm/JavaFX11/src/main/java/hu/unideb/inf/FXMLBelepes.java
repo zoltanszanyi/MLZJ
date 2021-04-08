@@ -17,8 +17,8 @@ public class FXMLBelepes {
     Users users = new Users();
     Bicicle bic = new Bicicle();
     ArrayList<Users> usersList = new ArrayList<>();
-    boolean emailIsExists = false;
-    boolean pwIsExists = false;
+    boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
+    boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
 
 
     @FXML
@@ -53,19 +53,25 @@ public class FXMLBelepes {
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
 
-        /*              Létezik-e ilyen felhasználó                      */
+        /*------------Létezik-e ilyen felhasználó------------------*/
         for (Users user: usersList) {//végigmeghy a lista elemein
             if(app.checkEmailInUse(login_user_name, user.getEmail()))//megnézi hogy egyenlő-e a két string
                 emailIsExists = true;
             if(app.checkEmailInUse(login_password.getText(), user.getPassword()))//megnézi hogy egyenlő-e a két string
                 pwIsExists = true;
         }
-        if(emailIsExists && pwIsExists) {
+        if(emailIsExists && pwIsExists) {//akkor fut le ha egyezik az email jelszo páros
             login_error.setTextFill(Color.color(0,1,0));
             login_error.setText("Sikeres belépés");
-        }else if(!emailIsExists || !pwIsExists){
+        }
+        if(!pwIsExists){//akkor fut le ha a jelszó nem egyezik az eltárolttal
             login_error.setTextFill(Color.color(1,0,0));
             login_error.setText("Rossz jelszót adtál meg");
+        }
+
+        if(!emailIsExists){//akkor fut le ha nincs ilyen email
+            login_error.setTextFill(Color.color(1,0,0));
+            login_error.setText("Rossz e-mailt adtál meg");
         }
 
         /*--------------------------------------------------------- */
@@ -83,21 +89,24 @@ public class FXMLBelepes {
                 emailIsExists = true;
         }
 
-        /*                      Regisztráció mentése                        */
-        if (app.registerPw(pw1, pw2) && !emailIsExists && users.checkPassword(pw1) && users.emailValidator(registration_username.getText())) {
+        /*------------------------Regisztráció mentése---------------------------*/
+        if (app.registerPw(pw1, pw2)//ellenőrzi hogy a két jelszó egyezik-e
+                && !emailIsExists//ellenőrzi hogy létezik-e már az email( ezt a fentebb lévő for ciklusban vizsgáljuk)
+                && users.checkPassword(pw1)//a jelszó erősségét ellenőrzi
+                && users.emailValidator(registration_username.getText())) {//elenőrzi hogy megfelelő formátumu-e az email
             registration_error.setTextFill(Color.color(0,1,0));
             registration_error.setText("Sikeres regisztráció!");
             usersList.add(new Users(bic.random(),registration_username.getText(),registration_password.getText()));
         }
-        if (!app.registerPw(pw1, pw2)) {
+        if (!app.registerPw(pw1, pw2)) {//Ha a két jelszó nem egyezik akkor fut le
             registration_error.setTextFill(Color.color(1, 0, 0));
             registration_error.setText("Sikertelen regisztráció! A megadott jelszavak NEM egyeznek meg!");
         }
-        if(!users.checkPassword(pw1)) {
+        if(!users.checkPassword(pw1)) {//akkor fut le ha nem elég erős a jelszó
             registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott jelszó nem elég erős!");
         }
-        if(emailIsExists) {
+        if(emailIsExists) {//akkor fut le ha már használják az emailt
             registration_error.setTextFill(Color.color(1,0,0));
             registration_error.setText("Sikertelen regisztráció! A megadott E-mail már használatban van");
         }
@@ -105,10 +114,9 @@ public class FXMLBelepes {
         registrationPwdReset();
         registrationPwd2Reset();
         registrationUsernameReset();
-
     }
 
-    public void pause(int s){
+    public void pause(int s){//teszt metódus a szüneteltetésre
         int i = 0;
         LocalTime startTime = LocalTime.now();
         LocalTime deltaTime = startTime.plusSeconds(s);
@@ -126,22 +134,20 @@ public class FXMLBelepes {
 
     }
 
-        public void registrationErrorReset(){
+        public void registrationErrorReset(){//reseteli az error üzenetet
             registration_error.setText(null);
         }
-        public void registrationPwdReset(){
+        public void registrationPwdReset(){//reseteli az reg pw-t üzenetet
             registration_password.setText(null);
         }
 
-        public void registrationPwd2Reset(){
+        public void registrationPwd2Reset(){//reseteli az reg pw ellenőrzőjét üzenetet
             registration_password2.setText(null);
         }
-        public void registrationUsernameReset(){ //regisztráció után reseteli a usernamet
-            registration_username.setText(null);
-        }
-        public TextField getLogin_username() {
-            return login_username;
-        }
+    public void registrationUsernameReset(){ //regisztráció után reseteli a usernamet
+        registration_username.setText(null);
+    }
+
     }
 
 
