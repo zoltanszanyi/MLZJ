@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Location {
     private int locID;
-    private int fullness; // telítettség százalékban
+    private float fullness; // telítettség százalékban
     private int max; //maximum férőhely
     private int nowin; //bentlévő járművek
     private String address; //cím
@@ -37,11 +37,11 @@ public class Location {
         this.locID = locID;
     }
 
-    public int getFullness() {
+    public float getFullness() {
         return fullness;
     }
 
-    public void setFullness(int fullness) {
+    public void setFullness(float fullness) {
         this.fullness = (getNowin()/getMax())*100;
     }
 
