@@ -1,15 +1,22 @@
 package hu.unideb.inf;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
-public class User_interface {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class User_interface implements Initializable {
 
     @FXML
-    private ComboBox<?> SelectLocation;
+    private ComboBox SelectLocation;
 
     @FXML
     private Label ActualLocation;
@@ -40,7 +47,7 @@ public class User_interface {
 
     @FXML
     void HandleReserveButton(MouseEvent event) {
-
+        Reserve.setText("mŰködik");
     }
 
     @FXML
@@ -55,7 +62,7 @@ public class User_interface {
 
     @FXML
     void HandleSelectLocation(ActionEvent event) {
-
+        String s = SelectLocation.getSelectionModel().getSelectedItem().toString();
     }
 
     @FXML
@@ -63,4 +70,9 @@ public class User_interface {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<String> combo = FXCollections.observableArrayList("Debrecen", "Nyíregyháza", "Levelek");
+        SelectLocation.setItems(combo);
+    }
 }

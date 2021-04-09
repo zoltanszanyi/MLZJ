@@ -2,12 +2,18 @@ package hu.unideb.inf;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 
+import java.io.IOException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +25,7 @@ public class FXMLBelepes {
     public ArrayList<Users> usersList = new ArrayList<>();
     boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
     boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
+    public boolean seged = false;
     TextField textField = new TextField();
 
 
@@ -47,12 +54,22 @@ public class FXMLBelepes {
     @FXML
     private Label registration_error;
 
+    public TextField getRegistration_username() {
+        return registration_username;
+    }
+
+    public PasswordField getLogin_password() {
+        return login_password;
+    }
+
     @FXML
-    void handleBejelentkezekButtonPushed(ActionEvent event) {
+    void handleBejelentkezekButtonPushed(ActionEvent event)  throws IOException {
         emailIsExists = false;
         pwIsExists = false;
+        seged = true;
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
+        usersList.add(new Users(bic.random(),"asd@asd.hu","Asd123+"));
 
         /*------------Létezik-e ilyen felhasználó------------------*/
         for (Users user: usersList) {//végigmeghy a lista elemein
@@ -64,6 +81,12 @@ public class FXMLBelepes {
         if(emailIsExists && pwIsExists) {//akkor fut le ha egyezik az email jelszo páros
             login_error.setTextFill(Color.color(0,1,0));
             login_error.setText("Sikeres belépés");
+            Parent userPageParent = FXMLLoader.load(getClass().getResource("/fxml/FXMLUser_interface.fxml"));
+            Scene userPage = new Scene(userPageParent);
+            Stage loginStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            loginStage.hide();
+            loginStage.setScene(userPage);
+            loginStage.show();
         }
         if(!pwIsExists){//akkor fut le ha a jelszó nem egyezik az eltárolttal
             login_error.setTextFill(Color.color(1,0,0));
@@ -80,7 +103,7 @@ public class FXMLBelepes {
     }
 
     @FXML
-    void handleRegisztrálokButtonPushed(ActionEvent event) {
+    void handleRegisztrálokButtonPushed(ActionEvent event){
         String pw1 = registration_password.getText();
         String pw2 = registration_password2.getText();
         emailIsExists = false;
