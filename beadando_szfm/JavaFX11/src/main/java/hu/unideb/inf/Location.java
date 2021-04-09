@@ -70,4 +70,5 @@ public class Location {
     }
 
     public ArrayList<Location> locationsClass = new ArrayList<>();
+
 }

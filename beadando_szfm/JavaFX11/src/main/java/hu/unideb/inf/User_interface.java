@@ -11,9 +11,13 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+
 public class User_interface implements Initializable {
+    public Location loc = new Location();
+    public Bicicle bic = new Bicicle();
 
     @FXML
     private ComboBox SelectLocation;
@@ -34,7 +38,7 @@ public class User_interface implements Initializable {
     private ComboBox<?> SelectBicycle;
 
     @FXML
-    private ComboBox<?> SelectHours;
+    private ComboBox SelectHours;
 
     @FXML
     private Label PrintReserveTime;
@@ -43,7 +47,7 @@ public class User_interface implements Initializable {
     private Label Reserve;
 
     @FXML
-    private ComboBox<?> SelectMin;
+    private ComboBox SelectMin;
 
     @FXML
     void HandleReserveButton(MouseEvent event) {
@@ -63,6 +67,7 @@ public class User_interface implements Initializable {
     @FXML
     void HandleSelectLocation(ActionEvent event) {
         String s = SelectLocation.getSelectionModel().getSelectedItem().toString();
+        ActualLocation.setText(s);
     }
 
     @FXML
@@ -72,11 +77,48 @@ public class User_interface implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<String> combo = FXCollections.observableArrayList("Debrecen", "Nyíregyháza", "Levelek", "Nagydobrony");
-        Location loc = new Location();
-        /*for (Location num : loc.locationsClass) {
-            combo.add(num.getName());
-        }*/
-        SelectLocation.setItems(combo);
+        /*----------------------------Location combobox---------------------------------*/
+        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Debreceni Unibike"));
+        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nyíregyházi Unibike"));
+        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike"));
+        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nagydobronyi Unibike"));
+        ObservableList<String> comboLoc = FXCollections.observableArrayList();
+        ArrayList<String> locName = new ArrayList<>();
+        for (Location num: loc.locationsClass)
+        {
+            locName.add(num.getName());
+        }
+        for (String num : locName) {
+            comboLoc.add(num);
+        }
+        SelectLocation.setItems(comboLoc);
+        /*-------------------------------------------------------------------------------*/
+
+
+        /*----------------------------Minutes combobox---------------------------------*/
+        ObservableList<String> comboMin = FXCollections.observableArrayList();
+        ArrayList<String> minutes = new ArrayList<>();
+        for(int i = 0; i < 60; i++)
+        {
+            minutes.add(Integer.toString(i));
+        }
+        for (String num : minutes) {
+            comboMin.add(num);
+        }
+        SelectMin.setItems(comboMin);
+        /*-------------------------------------------------------------------------------*/
+
+        /*----------------------------Hourses combobox---------------------------------*/
+        ObservableList<String> comboHou = FXCollections.observableArrayList();
+        ArrayList<String> hourses = new ArrayList<>();
+        for(int i = 0; i < 24; i++)
+        {
+            hourses.add(Integer.toString(i));
+        }
+        for (String num : hourses) {
+            comboHou.add(num);
+        }
+        SelectHours.setItems(comboHou);
+        /*-------------------------------------------------------------------------------*/
     }
 }

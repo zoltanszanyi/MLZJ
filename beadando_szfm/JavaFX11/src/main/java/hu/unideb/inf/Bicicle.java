@@ -13,8 +13,9 @@ public class Bicicle{
     private boolean type; //1 elektromos, 0 sima
     private int charge = 100;
     private List<String> users; //Azoknak a listája akik használták
+    private String where;
 
-    public Bicicle(int bicicleID, int cost, int timer, int service, int available, boolean type, int charge ,List<String> users) {
+    public Bicicle(int bicicleID, int cost, int timer, int service, int available, boolean type, int charge ,List<String> users, String where) {
         this.bicicleID = bicicleID;
         this.cost = cost;
         this.timer = timer;
@@ -23,10 +24,19 @@ public class Bicicle{
         this.type = type;
         this.charge = charge;
         this.users = users;
+        this.where = where;
     }
 
 
     public Bicicle() {
+    }
+
+    public String getWhere() {
+        return where;
+    }
+
+    public void setWhere(String where) {
+        this.where = where;
     }
 
     public int getCharge() {

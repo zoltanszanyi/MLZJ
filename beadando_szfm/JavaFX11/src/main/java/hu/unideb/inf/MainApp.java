@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class MainApp extends Application {
     User_interface userInterface = new User_interface();
 
+
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLBelepes.fxml"));
@@ -41,9 +42,13 @@ public class MainApp extends Application {
         FXMLBelepes belepes = new FXMLBelepes();
         Users users = new Users();
         Bicicle bic = new Bicicle();
+        Location loc = new Location();
         User_interface userInterface = new User_interface();
         ArrayList<Users> usersList = new ArrayList<>();
         ArrayList<Location> locations = new ArrayList<>();
+        /*--------------------------------------------------*/
+
+        /*--------------------------------------------------*/
 
     }
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/

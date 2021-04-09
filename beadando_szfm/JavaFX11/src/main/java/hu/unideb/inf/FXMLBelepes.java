@@ -22,6 +22,7 @@ public class FXMLBelepes {
     MainApp app = new MainApp();
     Users users = new Users();
     Bicicle bic = new Bicicle();
+    Location loc = new Location();
     public ArrayList<Users> usersList = new ArrayList<>();
     boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
     boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
@@ -71,6 +72,7 @@ public class FXMLBelepes {
         String jelszo = login_password.getText();
         usersList.add(new Users(bic.random(),"a","a"));
 
+
         /*------------Létezik-e ilyen felhasználó------------------*/
         for (Users user: usersList) {//végigmeghy a lista elemein
             if(app.checkEmailInUse(login_user_name, user.getEmail()))//megnézi hogy egyenlő-e a két string
@@ -87,6 +89,8 @@ public class FXMLBelepes {
             loginStage.hide();
             loginStage.setScene(userPage);
             loginStage.show();
+
+
         }
         if(!pwIsExists){//akkor fut le ha a jelszó nem egyezik az eltárolttal
             login_error.setTextFill(Color.color(1,0,0));
