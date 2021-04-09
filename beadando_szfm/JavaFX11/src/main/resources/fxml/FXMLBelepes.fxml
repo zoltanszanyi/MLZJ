@@ -8,15 +8,22 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="bodybackground" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.FXMLBelepes">
+<AnchorPane prefHeight="505.0" prefWidth="645.0" styleClass="bodybackground" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.FXMLBelepes">
    <children>
-      <GridPane layoutX="89.0" layoutY="36.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="45.0">
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="box1" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome To MLZJ-Bike" textAlignment="CENTER" AnchorPane.bottomAnchor="417.0" AnchorPane.leftAnchor="167.0" AnchorPane.topAnchor="41.0">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="29.0" layoutY="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="120.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.33333333333337" minWidth="10.0" prefWidth="188.66668701171875" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.33331298828125" minWidth="0.0" prefWidth="107.33331298828125" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.66664632161462" minWidth="10.0" prefWidth="214.66664632161462" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.33333333333337" minWidth="10.0" prefWidth="230.33333333333334" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.33331298828125" minWidth="0.0" prefWidth="113.99995930989584" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.66666666666663" minWidth="10.0" prefWidth="232.00004069010413" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -29,18 +36,22 @@
          <children>
             <Label text="Belépés" textFill="#111111" GridPane.halignment="CENTER">
                <font>
-                  <Font size="26.0" />
+                  <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <TextField fx:id="login_username" promptText="Add meg a felhasználó neved" GridPane.rowIndex="1" />
-            <PasswordField fx:id="login_password" promptText="Add meg a jelszavad" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#handleBejelentkezekButtonPushed" text="Bejelentkezek" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <TextField fx:id="registration_username" promptText="Add meg az egyetemi email címed" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <PasswordField fx:id="registration_password" promptText="Az email címhez tartozó jelszavad" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <PasswordField fx:id="registration_password2" promptText="Az email címhez tartozó jelszavad újra" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="login_username" promptText="Add meg a felhasználó neved" styleClass="user_box" stylesheets="@style.css" GridPane.rowIndex="1" />
+            <PasswordField fx:id="login_password" promptText="Add meg a jelszavad" styleClass="user_box" stylesheets="@style.css" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#handleBejelentkezekButtonPushed" styleClass="user_box" stylesheets="@style.css" text="Bejelentkezek" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="registration_username" promptText="Add meg az egyetemi email címed" styleClass="user_box" stylesheets="@style.css" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <PasswordField fx:id="registration_password" promptText="Az email címhez tartozó jelszavad" styleClass="user_box" stylesheets="@style.css" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <PasswordField fx:id="registration_password2" promptText="Az email címhez tartozó jelszavad újra" styleClass="user_box" stylesheets="@style.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label text="Regisztráció" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                <font>
-                  <Font size="26.0" />
+                  <Font name="System Bold" size="26.0" />
                </font>
             </Label>
             <Label fx:id="login_error" alignment="CENTER" prefHeight="81.0" prefWidth="255.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4">
@@ -53,7 +64,11 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#handleRegisztrálokButtonPushed" text="Regisztrálok" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#handleRegisztrálokButtonPushed" styleClass="user_box" stylesheets="@style.css" text="Regisztrálok" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </GridPane>
    </children>
