@@ -72,7 +72,11 @@ public class User_interface implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<String> combo = FXCollections.observableArrayList("Debrecen", "Nyíregyháza", "Levelek");
+        ObservableList<String> combo = FXCollections.observableArrayList("Debrecen", "Nyíregyháza", "Levelek", "Nagydobrony");
+        Location loc = new Location();
+        /*for (Location num : loc.locationsClass) {
+            combo.add(num.getName());
+        }*/
         SelectLocation.setItems(combo);
     }
 }

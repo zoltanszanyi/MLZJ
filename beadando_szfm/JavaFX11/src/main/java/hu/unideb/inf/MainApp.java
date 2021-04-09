@@ -63,11 +63,10 @@ public class MainApp extends Application {
     }
     public void getLocationArray(){
         Location loc = new Location();
-        /*ObservableList<String> combo = FXCollections.observableArrayList("Debrecen", "Nyíregyháza", "Levelek");
+        ObservableList<String> combo = FXCollections.observableArrayList();
         for (Location num : loc.locationsClass) {
             combo.add(num.getName());
         }
-        userInterface.setSelectLocation();*/
     }
 
 }
