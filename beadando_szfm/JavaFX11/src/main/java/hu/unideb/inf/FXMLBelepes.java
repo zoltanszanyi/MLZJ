@@ -69,7 +69,7 @@ public class FXMLBelepes {
         seged = true;
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
-        usersList.add(new Users(bic.random(),"asd@asd.hu","Asd123+"));
+        usersList.add(new Users(bic.random(),"a","a"));
 
         /*------------Létezik-e ilyen felhasználó------------------*/
         for (Users user: usersList) {//végigmeghy a lista elemein
