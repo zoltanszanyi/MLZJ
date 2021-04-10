@@ -100,7 +100,10 @@ public class User_interface implements Initializable {
         ArrayList<String> minutes = new ArrayList<>();
         for(int i = 0; i < 60; i++)
         {
-            minutes.add(Integer.toString(i));
+            String h = Integer.toString(i);
+            if(h.length() == 1)
+                h = "0" + h;
+            minutes.add(h);
         }
         for (String num : minutes) {
             comboMin.add(num);
@@ -113,7 +116,10 @@ public class User_interface implements Initializable {
         ArrayList<String> hourses = new ArrayList<>();
         for(int i = 0; i < 24; i++)
         {
-            hourses.add(Integer.toString(i));
+            String s = Integer.toString(i);
+            if(s.length() == 1)
+                s = "0" + s;
+            hourses.add(s);
         }
         for (String num : hourses) {
             comboHou.add(num);
