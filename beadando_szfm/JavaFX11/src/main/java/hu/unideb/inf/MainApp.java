@@ -12,7 +12,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+import org.h2.tools.Server;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 
@@ -51,6 +56,8 @@ public class MainApp extends Application {
         /*--------------------------------------------------*/
 
     }
+
+
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/
     public boolean checkEmailInUse(String a, String b)
     {
