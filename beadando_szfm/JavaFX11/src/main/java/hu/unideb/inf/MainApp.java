@@ -46,9 +46,7 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) throws SQLException {
         startDatabase();
-
-        final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
-        final EntityManager entityManager = entityManagerFactory.createEntityManager();
+        launch(args);
 
         FXMLBelepes belepes = new FXMLBelepes();
         Users users = new Users();
@@ -63,6 +61,15 @@ public class MainApp extends Application {
 
     }
 
+    public static void UpdateUser(Users person)
+    {
+        final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
+        final EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        entityManager.getTransaction().begin();
+        entityManager.persist(person);
+        entityManager.getTransaction().commit();
+    }
 
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/
     public boolean checkEmailInUse(String a, String b)

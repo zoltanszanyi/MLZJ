@@ -23,11 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Bicicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Bicicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +54,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -74,7 +81,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -84,8 +91,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Maven.JavaFX11 [javafx:run]">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="hu.unideb.inf.Application" />
       <module name="JavaFX11" />
       <extension name="coverage">
@@ -94,19 +103,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,7 +158,22 @@
     <configuration name="JavaFX11 [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="openjdk-16" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
             <option name="profiles">
@@ -184,6 +195,13 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.MainAppTest.registerPwTest" />
+      <item itemvalue="JUnit.MainAppTest.registerPwTest (1)" />
+      <item itemvalue="JUnit.MainAppTest.registerPwTest2" />
+      <item itemvalue="Maven.JavaFX11 [javafx:run]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
@@ -216,6 +234,8 @@
       <workItem from="1618053463825" duration="2444000" />
       <workItem from="1618064003760" duration="253000" />
       <workItem from="1618064407886" duration="4442000" />
+      <workItem from="1618083841084" duration="1145000" />
+      <workItem from="1618085009889" duration="53000" />
     </task>
     <servers />
   </component>

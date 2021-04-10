@@ -11,7 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
+import hu.unideb.inf.MainApp;
 
 import java.io.IOException;
 import java.time.LocalTime;
@@ -125,6 +125,10 @@ public class FXMLBelepes {
             registration_error.setTextFill(Color.color(0,1,0));
             registration_error.setText("Sikeres regisztráció!");
             usersList.add(new Users(bic.random(),registration_username.getText(),registration_password.getText()));
+            Users person = new Users();
+            person.setEmail(registration_username.getText());
+            person.setPassword(registration_password.getText());
+            MainApp.UpdateUser(person);
         }
         if (!app.registerPw(pw1, pw2)) {//Ha a két jelszó nem egyezik akkor fut le
             registration_error.setTextFill(Color.color(1, 0, 0));
