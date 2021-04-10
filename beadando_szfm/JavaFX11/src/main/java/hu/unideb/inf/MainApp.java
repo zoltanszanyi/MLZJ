@@ -44,8 +44,12 @@ public class MainApp extends Application {
      *
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws SQLException{
-        launch(args);
+    public static void main(String[] args) throws SQLException {
+        startDatabase();
+
+        final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
+        final EntityManager entityManager = entityManagerFactory.createEntityManager();
+        
         FXMLBelepes belepes = new FXMLBelepes();
         Users users = new Users();
         Bicicle bic = new Bicicle();
@@ -81,6 +85,9 @@ public class MainApp extends Application {
         for (Location num : loc.locationsClass) {
             combo.add(num.getName());
         }
+    }
+    private static void startDatabase() throws SQLException {
+        new Server().runTool("-tcp", "-web", "-ifNotExists");
     }
 
 }
