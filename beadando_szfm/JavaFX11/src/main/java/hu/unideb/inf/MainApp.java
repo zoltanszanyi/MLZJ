@@ -1,6 +1,8 @@
 package hu.unideb.inf;
 
 import javafx.application.Application;
+
+
 import static javafx.application.Application.launch;
 
 import javafx.collections.FXCollections;
@@ -42,7 +44,7 @@ public class MainApp extends Application {
      *
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException{
         launch(args);
         FXMLBelepes belepes = new FXMLBelepes();
         Users users = new Users();
