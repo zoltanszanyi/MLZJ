@@ -1,8 +1,14 @@
 package hu.unideb.inf;
 
 import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Location {
+    @Id
+    @GeneratedValue
     private int locID;
     private float fullness; // telítettség százalékban
     private int max; //maximum férőhely

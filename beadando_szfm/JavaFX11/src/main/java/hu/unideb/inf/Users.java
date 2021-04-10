@@ -2,10 +2,19 @@ package hu.unideb.inf;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.persistence.*;
 
+import static javax.persistence.GenerationType.SEQUENCE;
+
+@Entity
+@Table(name = "Users")
 public class Users{
+    @Id
+    @GeneratedValue(strategy = SEQUENCE)
     private int userID;
+    @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable = false)
     private String password;
 
     public Users(int userID, String email, String password) {

@@ -49,7 +49,7 @@ public class MainApp extends Application {
 
         final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
         final EntityManager entityManager = entityManagerFactory.createEntityManager();
-        
+
         FXMLBelepes belepes = new FXMLBelepes();
         Users users = new Users();
         Bicicle bic = new Bicicle();
