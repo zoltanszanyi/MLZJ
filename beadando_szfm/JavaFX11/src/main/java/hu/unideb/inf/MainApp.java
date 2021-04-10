@@ -2,19 +2,23 @@ package hu.unideb.inf;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 
 public class MainApp extends Application {
+    User_interface userInterface = new User_interface();
+
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -35,9 +39,17 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        FXMLBelepes belepes;
-        Users users;
+        FXMLBelepes belepes = new FXMLBelepes();
+        Users users = new Users();
+        Bicicle bic = new Bicicle();
+        Location loc = new Location();
+        User_interface userInterface = new User_interface();
         ArrayList<Users> usersList = new ArrayList<>();
+        ArrayList<Location> locations = new ArrayList<>();
+        /*--------------------------------------------------*/
+
+        /*--------------------------------------------------*/
+
     }
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/
     public boolean checkEmailInUse(String a, String b)
@@ -53,6 +65,13 @@ public class MainApp extends Application {
             return true;
         }
         return false;
+    }
+    public void getLocationArray(){
+        Location loc = new Location();
+        ObservableList<String> combo = FXCollections.observableArrayList();
+        for (Location num : loc.locationsClass) {
+            combo.add(num.getName());
+        }
     }
 
 }
