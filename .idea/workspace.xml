@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/JavaFX11.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1qnjJ1HUYImdmnK8AgnzgJ6zzGF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -74,7 +82,33 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainAppTest.registerPwTest (1)">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.inf.Application" />
+      <module name="JavaFX11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.inf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainAppTest.registerPwTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFX11" />
       <extension name="coverage">
@@ -150,6 +184,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.MainAppTest.registerPwTest (1)" />
         <item itemvalue="JUnit.MainAppTest.registerPwTest2" />
         <item itemvalue="JUnit.MainAppTest.registerPwTest" />
@@ -177,6 +212,8 @@
       <workItem from="1617984873462" duration="62000" />
       <workItem from="1617991797910" duration="5282000" />
       <workItem from="1618053463825" duration="2444000" />
+      <workItem from="1618064003760" duration="253000" />
+      <workItem from="1618064407886" duration="2043000" />
     </task>
     <servers />
   </component>

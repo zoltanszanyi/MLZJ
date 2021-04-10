@@ -1,10 +1,15 @@
 package hu.unideb.inf;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Bicicle{
+    @Id
+    @GeneratedValue
     private int bicicleID; //Azonosító
     private int cost; //az ára óránként
     private long StartTime;
@@ -13,9 +18,9 @@ public class Bicicle{
     private int available; // 1 elérhető, 0 nem
     private boolean type; //1 elektromos, 0 sima
     private int charge = 100;
-    private List<String> users; //Azoknak a listája akik használták
+    private String user; //Az a felhasználó akinél van az aktuális bicikli, ha null akkor senkinél csincs a bicikli
 
-    public Bicicle(int bicicleID, int cost, long timer, int service, int available, boolean type, int charge ,List<String> users) {
+    public Bicicle(int bicicleID, int cost, long timer, int service, int available, boolean type, int charge ,String users) {
         this.bicicleID = bicicleID;
         this.cost = cost;
         this.timer = timer;
@@ -23,7 +28,7 @@ public class Bicicle{
         this.available = available;
         this.type = type;
         this.charge = charge;
-        this.users = users;
+        this.user = user;
     }
 
 
@@ -54,7 +59,7 @@ public class Bicicle{
 
     public boolean isType() { return type; }
 
-    public List<String> getUsers() { return users; }
+    public String getUsers() { return user; }
 
     public void setBicicleID(int bicicleID) { this.bicicleID = bicicleID; }
 
@@ -68,7 +73,7 @@ public class Bicicle{
 
     public void setType(boolean type) { this.type = type; }
 
-    public void setUsers(List<String> users) { this.users = users; }
+    public void setUsers(List<String> users) { this.user = user; }
 
     public void StartTime() //elmenti az időt amikor elvitték a járművet
     {
