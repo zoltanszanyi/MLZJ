@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -18,6 +19,8 @@ import java.util.ResourceBundle;
 public class User_interface implements Initializable {
     public Location loc = new Location();
     public Bicicle bic = new Bicicle();
+    String min;
+    String hour;
 
     @FXML
     private ComboBox SelectLocation;
@@ -43,25 +46,26 @@ public class User_interface implements Initializable {
     @FXML
     private Label PrintReserveTime;
 
+
     @FXML
-    private Label Reserve;
+    private Label ReserveSuccessLabel;
 
     @FXML
     private ComboBox SelectMin;
 
     @FXML
-    void HandleReserveButton(MouseEvent event) {
-        Reserve.setText("mŰködik");
+    void HandleReserveButton(ActionEvent event) {
+        ReserveSuccessLabel.setTextFill(Color.color(0.1,0.1,0.1));
+        ReserveSuccessLabel.setText("A lefoglalás sikeresen megtörtént");
     }
 
     @FXML
     void HandleSelectBicycle(ActionEvent event) {
-
     }
 
     @FXML
     void HandleSelectHours(ActionEvent event) {
-
+        hour = SelectHours.getSelectionModel().getSelectedItem().toString();
     }
 
     @FXML
@@ -72,7 +76,12 @@ public class User_interface implements Initializable {
 
     @FXML
     void HandleSelectMin(ActionEvent event) {
+        min = SelectMin.getSelectionModel().getSelectedItem().toString();
+    }
 
+    @FXML
+    void HandleOkButtonPushed(ActionEvent event) {
+        PrintReserveTime.setText("Idő kiválasztva");
     }
 
     @Override
@@ -98,7 +107,7 @@ public class User_interface implements Initializable {
         /*----------------------------Minutes combobox---------------------------------*/
         ObservableList<String> comboMin = FXCollections.observableArrayList();
         ArrayList<String> minutes = new ArrayList<>();
-        for(int i = 0; i < 60; i++)
+        for(int i = 0; i <= 59; i++)
         {
             minutes.add(Integer.toString(i));
         }
@@ -111,7 +120,7 @@ public class User_interface implements Initializable {
         /*----------------------------Hourses combobox---------------------------------*/
         ObservableList<String> comboHou = FXCollections.observableArrayList();
         ArrayList<String> hourses = new ArrayList<>();
-        for(int i = 0; i < 24; i++)
+        for(int i = 0; i <= 23; i++)
         {
             hourses.add(Integer.toString(i));
         }
