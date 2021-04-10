@@ -23,7 +23,6 @@ public class MainApp extends Application {
         stage.setTitle("Kezdőlap");
         stage.setScene(scene);
         stage.show();
-
     }
 
     /**

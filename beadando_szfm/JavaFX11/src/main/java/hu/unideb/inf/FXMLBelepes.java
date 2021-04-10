@@ -18,7 +18,7 @@ public class FXMLBelepes {
     Bicicle bic = new Bicicle();
     public ArrayList<Users> usersList = new ArrayList<>();
     boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
-    boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
+    boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezésé
     TextField textField = new TextField();
 
 
