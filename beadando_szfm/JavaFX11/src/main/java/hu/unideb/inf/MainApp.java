@@ -61,13 +61,13 @@ public class MainApp extends Application {
 
     }
 
-    public static void UpdateUser(Users person)
+    public static void UpdateUser(Users p)
     {
         final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
         final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
-        entityManager.persist(person);
+        entityManager.persist(p);
         entityManager.getTransaction().commit();
     }
 

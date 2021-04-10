@@ -11,12 +11,18 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import hu.unideb.inf.MainApp;
+import org.h2.tools.Server;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+
+import static hu.unideb.inf.MainApp.UpdateUser;
 
 public class FXMLBelepes {
     MainApp app = new MainApp();
@@ -107,7 +113,7 @@ public class FXMLBelepes {
     }
 
     @FXML
-    void handleRegisztrálokButtonPushed(ActionEvent event){
+    void handleRegisztrálokButtonPushed(ActionEvent event)throws IOException{
         String pw1 = registration_password.getText();
         String pw2 = registration_password2.getText();
         emailIsExists = false;
@@ -128,7 +134,7 @@ public class FXMLBelepes {
             Users person = new Users();
             person.setEmail(registration_username.getText());
             person.setPassword(registration_password.getText());
-            MainApp.UpdateUser(person);
+            UpdateUser(person);
         }
         if (!app.registerPw(pw1, pw2)) {//Ha a két jelszó nem egyezik akkor fut le
             registration_error.setTextFill(Color.color(1, 0, 0));
