@@ -1,4 +1,6 @@
 hu\unideb\inf\User_interface.class
+hu\unideb\inf\UsersDAO.class
 hu\unideb\inf\FXMLBelepes.class
+hu\unideb\inf\JpaUsersDAO.class
 hu\unideb\inf\Customer.class
 hu\unideb\inf\MainApp.class

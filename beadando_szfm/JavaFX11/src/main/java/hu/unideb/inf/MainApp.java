@@ -7,12 +7,9 @@ import static javafx.application.Application.launch;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import org.h2.tools.Server;
 
@@ -48,6 +45,9 @@ public class MainApp extends Application {
         startDatabase();
         launch(args);
 
+        final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
+        final EntityManager entityManager = entityManagerFactory.createEntityManager();
+
         FXMLBelepes belepes = new FXMLBelepes();
         Users users = new Users();
         Bicicle bic = new Bicicle();
@@ -59,16 +59,6 @@ public class MainApp extends Application {
 
         /*--------------------------------------------------*/
 
-    }
-
-    public static void UpdateUser(Users p)
-    {
-        final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
-        final EntityManager entityManager = entityManagerFactory.createEntityManager();
-
-        entityManager.getTransaction().begin();
-        entityManager.persist(p);
-        entityManager.getTransaction().commit();
     }
 
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/

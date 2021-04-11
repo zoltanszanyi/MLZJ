@@ -7,14 +7,12 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
-@Table(name = "Users")
+//@Table(name = "Users")
 public class Users{
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int userID;
-    @Column(nullable = false, unique = true)
+    @GeneratedValue(strategy = SEQUENCE)
+    private Integer userID;
     private String email;
-    @Column(nullable = false)
     private String password;
 
     public Users(int userID, String email, String password) {
@@ -27,8 +25,7 @@ public class Users{
     public Users() {
     }
 
-
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
@@ -40,7 +37,7 @@ public class Users{
         return password;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(final Integer userID) {
         this.userID = userID;
     }
 
