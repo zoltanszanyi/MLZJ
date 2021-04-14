@@ -5,10 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import static javax.persistence.GenerationType.SEQUENCE;
+
 @Entity
 public class Location {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = SEQUENCE)
     private int locID;
     private float fullness; // telítettség százalékban
     private int max; //maximum férőhely
@@ -47,7 +49,7 @@ public class Location {
         return fullness;
     }
 
-    public void setFullness(float fullness) {
+    public void setFullness() {
         this.fullness = (getNowin()/getMax())*100;
     }
 

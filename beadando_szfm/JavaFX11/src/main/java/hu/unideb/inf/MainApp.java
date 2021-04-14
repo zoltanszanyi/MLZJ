@@ -58,7 +58,19 @@ public class MainApp extends Application {
         /*--------------------------------------------------*/
 
         /*--------------------------------------------------*/
+        /*Bicicle b = new Bicicle();
+        b.setLocID(101);
+        b.setCost(500);
+        b.setStartTime(System.currentTimeMillis()/1000);
+        b.setAvailable(0);
+        b.setType(false);
+        b.setUsers(1);
 
+        try (BicicleDAO bDAO = new JpaBicicleDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
+            bDAO.saveBicicle(b); //felhasználó elmentése adatbázisba
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
     }
 
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/

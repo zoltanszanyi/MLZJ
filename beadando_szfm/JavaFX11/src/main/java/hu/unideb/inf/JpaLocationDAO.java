@@ -12,28 +12,28 @@ public class JpaLocationDAO implements LocationDAO{
     final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     @Override
-    public void saveLocation(Location l) {
+    public void saveLocation(Location l) {  //telephely hozzáadása az adatbázishoz
         entityManager.getTransaction().begin();
         entityManager.persist(l);
         entityManager.getTransaction().commit();
     }
 
     @Override
-    public void deleteLocation(Location l) {
+    public void deleteLocation(Location l) {    //telephely eltávolítása az adatbázisból
         entityManager.getTransaction().begin();
         entityManager.remove(l);
         entityManager.getTransaction().commit();
     }
 
     @Override
-    public void updateteLocation(Location l) {
+    public void updateteLocation(Location l) {   //teleephely frissítése az adatbázisban
         entityManager.getTransaction().begin();
         entityManager.persist(l);
         entityManager.getTransaction().commit();
     }
 
     @Override
-    public List<Location> getLocations() {
+    public List<Location> getLocations() {  //telephelyek lekérdezése az adatbázisból
         TypedQuery<Location> query = entityManager.createQuery("SELECT l FROM Location l", Location.class);
         List<Location> locations = query.getResultList();
         return locations;
