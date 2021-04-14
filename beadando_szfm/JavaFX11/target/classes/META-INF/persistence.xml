@@ -9,7 +9,7 @@
         <class>hu.unideb.inf.Users</class>
         <class>hu.unideb.inf.Bicicle</class>
         <class>hu.unideb.inf.Location</class>
-        <class>hu.unideb.inf.Customer</class>
+        <!--<class>hu.unideb.inf.Customer</class>-->
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
