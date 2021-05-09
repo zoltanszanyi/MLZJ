@@ -6,10 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import static javax.persistence.GenerationType.SEQUENCE;
+
 @Entity
 public class Bicicle{
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = SEQUENCE)
     private int bicicleID; //Azonosító
     private int cost; //az ára óránként
     private long StartTime;
@@ -18,9 +20,10 @@ public class Bicicle{
     private int available; // 1 elérhető, 0 nem
     private boolean type; //1 elektromos, 0 sima
     private int charge = 100;
-    private String user; //Az a felhasználó akinél van az aktuális bicikli, ha null akkor senkinél csincs a bicikli
+    private int userID; //Az a felhasználó akinél van az aktuális bicikli, ha null akkor senkinél csincs a bicikli
+    private int locID;  //a bicikli jelenlegi telephelye
 
-    public Bicicle(int bicicleID, int cost, long timer, int service, int available, boolean type, int charge ,String users) {
+    public Bicicle(int bicicleID, int cost, long timer, int service, int available, boolean type, int charge ,int userID, int locID) {
         this.bicicleID = bicicleID;
         this.cost = cost;
         this.timer = timer;
@@ -28,7 +31,8 @@ public class Bicicle{
         this.available = available;
         this.type = type;
         this.charge = charge;
-        this.user = user;
+        this.userID = userID;
+        this.locID = locID;
     }
 
 
@@ -59,7 +63,11 @@ public class Bicicle{
 
     public boolean isType() { return type; }
 
-    public String getUsers() { return user; }
+    public int getUserID() { return userID; }
+
+    public int getLocID() {return locID;}
+
+    public void setLocID(int locID) {this.locID = locID;}
 
     public void setBicicleID(int bicicleID) { this.bicicleID = bicicleID; }
 
@@ -73,7 +81,7 @@ public class Bicicle{
 
     public void setType(boolean type) { this.type = type; }
 
-    public void setUsers(List<String> users) { this.user = user; }
+    public void setUsers(int users) { this.userID = userID; }
 
     public void StartTime() //elmenti az időt amikor elvitték a járművet
     {
