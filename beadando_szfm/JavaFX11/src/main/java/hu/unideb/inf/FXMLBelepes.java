@@ -11,16 +11,20 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.h2.engine.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class FXMLBelepes {
     MainApp app = new MainApp();
     Users users = new Users();
     Bicicle bic = new Bicicle();
     Location loc = new Location();
-    public ArrayList<Users> usersList = new ArrayList<>();
+    User_interface UI = new User_interface();
+    public List<Users> usersList = new ArrayList<>();
+    public List<Location> locationsClass = new ArrayList<>();
     boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
     boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
     public boolean seged = false;
@@ -61,14 +65,16 @@ public class FXMLBelepes {
     }
 
     @FXML
-    void handleBejelentkezekButtonPushed(ActionEvent event)  throws IOException {
+    void handleBejelentkezekButtonPushed(ActionEvent event)  throws Exception {
         emailIsExists = false;
         pwIsExists = false;
         seged = true;
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
-        usersList.add(new Users(bic.random(),"a","a"));
-
+        Users u = new Users();
+        try (UsersDAO uDAO = new JpaUsersDAO();) {
+            usersList = uDAO.getUsers();
+        }
 
         /*------------Létezik-e ilyen felhasználó------------------*/
         for (Users user: usersList) {//végigmeghy a lista elemein
@@ -86,7 +92,8 @@ public class FXMLBelepes {
             loginStage.hide();
             loginStage.setScene(userPage);
             loginStage.show();
-
+            UI.uploadToDataBase();
+            UI.listStockUp();
 
         }
         if(!pwIsExists){//akkor fut le ha a jelszó nem egyezik az eltárolttal

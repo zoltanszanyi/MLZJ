@@ -11,14 +11,18 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.ExecutionException;
 
 
 public class User_interface implements Initializable {
     public Location loc = new Location();
     public Bicicle bic = new Bicicle();
+    public FXMLBelepes belep = new FXMLBelepes();
     String min;
     String hour;
 
@@ -84,21 +88,44 @@ public class User_interface implements Initializable {
         PrintReserveTime.setText("Idő kiválasztva");
     }
 
+    public void uploadToDataBase() throws Exception
+    {
+        try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a locationshopz
+            loc = new Location(bic.random(), 10, 5, "Debrecen, anyád fasza utca", "Debreceni Unibike");
+            lDAO.saveLocation(loc); //location elmentése adatbázisba
+            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike");
+            lDAO.saveLocation(loc);
+            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nyíregyházi Unibike");
+            lDAO.saveLocation(loc);
+            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike");
+            lDAO.saveLocation(loc);
+            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nagydobronyi Unibike");
+            lDAO.saveLocation(loc);
+        }
+
+    }
+
+    public void listStockUp() throws Exception
+    {
+        try (LocationDAO lDAO = new JpaLocationDAO();) {
+            belep.locationsClass.addAll(lDAO.getLocations()) ;
+        }
+
+    }
+
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources){
         /*----------------------------Location combobox---------------------------------*/
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Debreceni Unibike"));
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nyíregyházi Unibike"));
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike"));
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nagydobronyi Unibike"));
         ObservableList<String> comboLoc = FXCollections.observableArrayList();
-        ArrayList<String> locName = new ArrayList<>();
-        for (Location num: loc.locationsClass)
+        List<String> locName = new ArrayList<>();
+        List<Location> seged = new ArrayList<>();
+        seged.addAll(belep.locationsClass);
+        for (Location num: seged)
         {
             locName.add(num.getName());
         }
         for (String num : locName) {
-            comboLoc.add(num);
+            comboLoc.addAll(num);
         }
         SelectLocation.setItems(comboLoc);
         /*-------------------------------------------------------------------------------*/

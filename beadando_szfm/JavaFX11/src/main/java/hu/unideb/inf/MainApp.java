@@ -88,11 +88,11 @@ public class MainApp extends Application {
         }
         return false;
     }
-    public void getLocationArray(){
+    public void getLocationArray() throws Exception{
         Location loc = new Location();
         ObservableList<String> combo = FXCollections.observableArrayList();
-        for (Location num : loc.locationsClass) {
-            combo.add(num.getName());
+        try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
+            combo.add(lDAO.getLocations().toString()); //felhasználó elmentése adatbázisba
         }
     }
     private static void startDatabase() throws SQLException {
