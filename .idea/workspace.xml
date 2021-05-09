@@ -23,18 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/User_interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/User_interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/User_interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/User_interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -91,15 +91,14 @@ public class User_interface implements Initializable {
     public void uploadToDataBase() throws Exception
     {
         try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a locationshopz
-            loc = new Location(bic.random(), 10, 5, "Debrecen, anyád fasza utca", "Debreceni Unibike");
+            loc = new Location(bic.random(), 10, 5, "Debrecen, Kassai út 122.", "Debreceni Unibike");
             lDAO.saveLocation(loc); //location elmentése adatbázisba
-            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike");
+            loc = new Location(bic.random(), 10,5,"Levelek, Új út 12.","Leveleki Unibike");
             lDAO.saveLocation(loc);
-            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nyíregyházi Unibike");
+            loc = new Location(bic.random(), 10,5,"Nyíregyháza, Kossut utca 34.","Nyíregyházi Unibike");
             lDAO.saveLocation(loc);
-            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike");
-            lDAO.saveLocation(loc);
-            loc = new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nagydobronyi Unibike");
+
+            loc = new Location(bic.random(), 10,5,"Nagydobrony, Petőfi út 22","Nagydobronyi Unibike");
             lDAO.saveLocation(loc);
         }
 
@@ -122,10 +121,7 @@ public class User_interface implements Initializable {
         seged.addAll(belep.locationsClass);
         for (Location num: seged)
         {
-            locName.add(num.getName());
-        }
-        for (String num : locName) {
-            comboLoc.addAll(num);
+            comboLoc.add(num.getName());
         }
         SelectLocation.setItems(comboLoc);
         /*-------------------------------------------------------------------------------*/
