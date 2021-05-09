@@ -24,11 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Bicicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/FXMLBelepes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Bicicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Bicicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/User_interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/User_interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/FXMLBelepes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/Location.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/MainApp.class" afterDir="false" />
@@ -101,6 +101,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -244,7 +255,7 @@
       <workItem from="1618419321296" duration="5166000" />
       <workItem from="1618434896145" duration="576000" />
       <workItem from="1618491342865" duration="1542000" />
-      <workItem from="1620549522485" duration="984000" />
+      <workItem from="1620549522485" duration="4454000" />
     </task>
     <servers />
   </component>

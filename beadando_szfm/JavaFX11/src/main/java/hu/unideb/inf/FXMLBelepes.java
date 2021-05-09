@@ -14,13 +14,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class FXMLBelepes {
     MainApp app = new MainApp();
     Users users = new Users();
     Bicicle bic = new Bicicle();
     Location loc = new Location();
-    public ArrayList<Users> usersList = new ArrayList<>();
+    public List<Users> usersList = new ArrayList<>();
     boolean emailIsExists = false;//változó amivel ellenőrizhetjük az email létezését
     boolean pwIsExists = false;//változó amivel ellenőrizhetjük a jelszó létezését
     public boolean seged = false;
@@ -61,13 +62,15 @@ public class FXMLBelepes {
     }
 
     @FXML
-    void handleBejelentkezekButtonPushed(ActionEvent event)  throws IOException {
+    void handleBejelentkezekButtonPushed(ActionEvent event)  throws Exception {
         emailIsExists = false;
         pwIsExists = false;
         seged = true;
         String login_user_name = login_username.getText();
         String jelszo = login_password.getText();
-        usersList.add(new Users(bic.random(),"a","a"));
+        try (UsersDAO uDAO = new JpaUsersDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
+            usersList =  uDAO.getUsers(); //felhasználó elmentése adatbázisba
+        }
 
 
         /*------------Létezik-e ilyen felhasználó------------------*/
