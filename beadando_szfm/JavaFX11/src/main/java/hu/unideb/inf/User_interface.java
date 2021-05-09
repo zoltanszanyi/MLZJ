@@ -73,6 +73,19 @@ public class User_interface implements Initializable {
     void HandleSelectLocation(ActionEvent event) {
         String s = SelectLocation.getSelectionModel().getSelectedItem().toString();
         ActualLocation.setText(s);
+        List<Location> locName = new ArrayList<>();
+        try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
+            locName = lDAO.getLocations(); //felhasználó elmentése adatbázisba
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        for (Location num: locName) {
+            if(num.getName().equals(ActualLocation.getText()))
+            {
+                LocationInfo.setText(num.getAddress());
+                Fullness.setText(String.valueOf(num.getFullness()) + "%" + "\n" + num.getMax() +"/"+ num.getNowin());
+            }
+        }
     }
 
     @FXML
@@ -88,10 +101,6 @@ public class User_interface implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         /*----------------------------Location combobox---------------------------------*/
-        /*loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Debreceni Unibike"));
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nyíregyházi Unibike"));
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Leveleki Unibike"));
-        loc.locationsClass.add(new Location(bic.random(), 10,5,"Debrecen, anyád fasza utca","Nagydobronyi Unibike"));*/
         ObservableList<String> comboLoc = FXCollections.observableArrayList();
         List<Location> locName = new ArrayList<>();
         try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
@@ -103,6 +112,8 @@ public class User_interface implements Initializable {
             comboLoc.add(num.getName());
         }
         SelectLocation.setItems(comboLoc);
+
+
         /*-------------------------------------------------------------------------------*/
 
 
