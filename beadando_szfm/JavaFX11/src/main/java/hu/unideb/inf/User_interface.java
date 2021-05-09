@@ -83,8 +83,9 @@ public class User_interface implements Initializable {
             if(num.getName().equals(ActualLocation.getText()))
             {
                 LocationInfo.setText(num.getAddress());
-                Fullness.setText(String.valueOf(num.getFullness()) + "%" + "\n" + num.getMax() +"/"+ num.getNowin());
+                Fullness.setText(String.valueOf(num.getFullness()) + "%" + "\n" + num.getNowin() +"/"+ num.getMax());
             }
+            Price.setText("Első fél óra ingyenes!\nHagyományos: 400ft/0,5 óra\nElektromos: 600ft/0,5 óra");
         }
     }
 
