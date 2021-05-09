@@ -7,7 +7,7 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
-@Table(name = "Users")
+//@Table(name = "Users")
 public class Users{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

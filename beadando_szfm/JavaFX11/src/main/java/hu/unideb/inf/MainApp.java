@@ -69,6 +69,8 @@ public class MainApp extends Application {
         entityManager.getTransaction().begin();
         entityManager.persist(p);
         entityManager.getTransaction().commit();
+        entityManager.close();
+        entityManagerFactory.close();
     }
 
     /*--------- Ellenőrzi, hogy az Email használatban van-e már ---------*/
