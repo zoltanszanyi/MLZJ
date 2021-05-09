@@ -17,11 +17,12 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 
-public class User_interface implements Initializable {
+public class User_interface{
     public Location loc = new Location();
     public Bicicle bic = new Bicicle();
     String min;
     String hour;
+    int actual = 2;
 
     @FXML
     private ComboBox SelectLocation;
@@ -39,7 +40,7 @@ public class User_interface implements Initializable {
     private Label Price;
 
     @FXML
-    private ComboBox<?> SelectBicycle;
+    private ComboBox SelectBicycle;
 
     @FXML
     private ComboBox SelectHours;
@@ -84,6 +85,8 @@ public class User_interface implements Initializable {
             {
                 LocationInfo.setText(num.getAddress());
                 Fullness.setText(String.valueOf(num.getFullness()) + "%" + "\n" + num.getNowin() +"/"+ num.getMax());
+                actual = num.getLocID();
+                initialize();
             }
             Price.setText("Első fél óra ingyenes!\nHagyományos: 400ft/0,5 óra\nElektromos: 600ft/0,5 óra");
         }
@@ -99,8 +102,7 @@ public class User_interface implements Initializable {
         PrintReserveTime.setText("Idő kiválasztva");
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize() {
         /*----------------------------Location combobox---------------------------------*/
         ObservableList<String> comboLoc = FXCollections.observableArrayList();
         List<Location> locName = new ArrayList<>();
@@ -113,10 +115,22 @@ public class User_interface implements Initializable {
             comboLoc.add(num.getName());
         }
         SelectLocation.setItems(comboLoc);
-
-
         /*-------------------------------------------------------------------------------*/
 
+        /*----------------------------Bicycle combobox---------------------------------*/
+        ObservableList<String> comboBic = FXCollections.observableArrayList();
+        List<Bicicle> bicName = new ArrayList<>();
+        try (BicicleDAO bDAO = new JpaBicicleDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
+            bicName = bDAO.getBicicles(); //felhasználó elmentése adatbázisba
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        for (Bicicle num : bicName) {
+            if(num.getLocID() == actual)
+                comboBic.add(String.valueOf(num.getBicicleID()));
+        }
+        SelectBicycle.setItems(comboBic);
+        /*-------------------------------------------------------------------------------*/
 
         /*----------------------------Minutes combobox---------------------------------*/
         ObservableList<String> comboMin = FXCollections.observableArrayList();

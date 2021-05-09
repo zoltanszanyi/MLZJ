@@ -24,8 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f2e49176-29be-4f9e-ba1b-51e06b015e84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/db_MLZJ.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/User_interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/src/main/java/hu/unideb/inf/User_interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/User_interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/classes/hu/unideb/inf/User_interface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/beadando_szfm/JavaFX11/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,13 +45,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2.4/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1qnjJ1HUYImdmnK8AgnzgJ6zzGF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -241,6 +236,7 @@
       <workItem from="1618491342865" duration="1542000" />
       <workItem from="1620549522485" duration="4454000" />
       <workItem from="1620569905315" duration="207000" />
+      <workItem from="1620588303807" duration="1927000" />
     </task>
     <servers />
   </component>
