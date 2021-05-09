@@ -53,8 +53,8 @@ public class MainApp extends Application {
         Bicicle bic = new Bicicle();
         Location loc = new Location();
         User_interface userInterface = new User_interface();
-        ArrayList<Users> usersList = new ArrayList<>();
-        ArrayList<Location> locations = new ArrayList<>();
+        //ArrayList<Users> usersList = new ArrayList<>();
+        //ArrayList<Location> locations = new ArrayList<>();
         /*--------------------------------------------------*/
 
         /*--------------------------------------------------*/
@@ -68,6 +68,19 @@ public class MainApp extends Application {
 
         try (BicicleDAO bDAO = new JpaBicicleDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
             bDAO.saveBicicle(b); //felhasználó elmentése adatbázisba
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+
+        /*Location l = new Location();
+        l.setName("Debreceni Unibike");
+        l.setAddress("4025 Debrecen Kassai út 45.");
+        l.setMax(20);
+        l.setNowin(5);
+        l.setFullness();
+
+        try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources
+            lDAO.deleteLocation(l);
         } catch (Exception e) {
             e.printStackTrace();
         }*/
@@ -88,13 +101,13 @@ public class MainApp extends Application {
         }
         return false;
     }
-    public void getLocationArray(){
+    /*public void getLocationArray(){
         Location loc = new Location();
         ObservableList<String> combo = FXCollections.observableArrayList();
         for (Location num : loc.locationsClass) {
             combo.add(num.getName());
         }
-    }
+    }*/
     private static void startDatabase() throws SQLException {
         new Server().runTool("-tcp", "-web", "-ifNotExists");
     }

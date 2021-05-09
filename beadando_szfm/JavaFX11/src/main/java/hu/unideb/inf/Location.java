@@ -77,6 +77,6 @@ public class Location {
         this.address = address;
     }
 
-    public ArrayList<Location> locationsClass = new ArrayList<>();
+    //public ArrayList<Location> locationsClass = new ArrayList<>();
 
 }
