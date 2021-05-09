@@ -122,10 +122,11 @@ public class FXMLBelepes {
             registration_error.setTextFill(Color.color(0,1,0));
             registration_error.setText("Sikeres regisztráció!");
             usersList.add(new Users(bic.random(),registration_username.getText(),registration_password.getText()));
-            users.setEmail(registration_username.getText());    //felhasználó emailének elmentésse
-            users.setPassword(registration_password.getText()); //felhasználó jelszavának elmentése
+            Users u = new Users();
+            u.setEmail(registration_username.getText());    //felhasználó emailének elmentésse
+            u.setPassword(registration_password.getText()); //felhasználó jelszavának elmentése
             try (UsersDAO uDAO = new JpaUsersDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
-                uDAO.saveUser(users); //felhasználó elmentése adatbázisba
+                uDAO.saveUser(u); //felhasználó elmentése adatbázisba
             }
         }
         if (!app.registerPw(pw1, pw2)) {//Ha a két jelszó nem egyezik akkor fut le

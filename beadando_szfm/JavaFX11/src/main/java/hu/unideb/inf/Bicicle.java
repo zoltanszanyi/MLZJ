@@ -20,10 +20,10 @@ public class Bicicle{
     private int available; // 1 elérhető, 0 nem
     private boolean type; //1 elektromos, 0 sima
     private int charge = 100;
-    private int user; //Az a felhasználó akinél van az aktuális bicikli, ha null akkor senkinél csincs a bicikli
+    private int userID; //Az a felhasználó akinél van az aktuális bicikli, ha null akkor senkinél csincs a bicikli
     private int locID;  //a bicikli jelenlegi telephelye
 
-    public Bicicle(int bicicleID, int cost, long timer, int service, int available, boolean type, int charge ,int users, int locID) {
+    public Bicicle(int bicicleID, int cost, long timer, int service, int available, boolean type, int charge ,int userID, int locID) {
         this.bicicleID = bicicleID;
         this.cost = cost;
         this.timer = timer;
@@ -31,7 +31,7 @@ public class Bicicle{
         this.available = available;
         this.type = type;
         this.charge = charge;
-        this.user = user;
+        this.userID = userID;
         this.locID = locID;
     }
 
@@ -63,7 +63,7 @@ public class Bicicle{
 
     public boolean isType() { return type; }
 
-    public int getUsers() { return user; }
+    public int getUserID() { return userID; }
 
     public int getLocID() {return locID;}
 
@@ -81,7 +81,7 @@ public class Bicicle{
 
     public void setType(boolean type) { this.type = type; }
 
-    public void setUsers(int users) { this.user = user; }
+    public void setUsers(int users) { this.userID = userID; }
 
     public void StartTime() //elmenti az időt amikor elvitték a járművet
     {

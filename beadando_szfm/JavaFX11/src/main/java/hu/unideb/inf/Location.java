@@ -50,7 +50,7 @@ public class Location {
     }
 
     public void setFullness() {
-        this.fullness = (getNowin()/getMax())*100;
+        this.fullness = ((float)getNowin()/getMax())*100;
     }
 
     public int getMax() {
