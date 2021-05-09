@@ -88,13 +88,7 @@ public class MainApp extends Application {
         }
         return false;
     }
-    public void getLocationArray(){
-        Location loc = new Location();
-        ObservableList<String> combo = FXCollections.observableArrayList();
-        for (Location num : loc.locationsClass) {
-            combo.add(num.getName());
-        }
-    }
+
     private static void startDatabase() throws SQLException {
         new Server().runTool("-tcp", "-web", "-ifNotExists");
     }
