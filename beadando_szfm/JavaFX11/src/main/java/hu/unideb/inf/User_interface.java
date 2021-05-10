@@ -114,6 +114,16 @@ public class User_interface{
 
     @FXML
     void HandleSelectBicycle(ActionEvent event) {
+        List<Bicicle> bicicles = new ArrayList<>();
+        try (BicicleDAO bDAO = new JpaBicicleDAO();) {
+            bicicles= bDAO.getBicicles();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        /*for (Bicicle num : bicicles) {
+            if(num.getBicicleID() == 1)
+        }
+        String s = */
     }
 
     @FXML
