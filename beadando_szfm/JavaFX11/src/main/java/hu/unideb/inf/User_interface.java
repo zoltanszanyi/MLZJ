@@ -110,20 +110,39 @@ public class User_interface{
     void HandleReserveButton(ActionEvent event) {
         ReserveSuccessLabel.setTextFill(Color.color(0.1,0.1,0.1));
         ReserveSuccessLabel.setText("A lefoglalás sikeresen megtörtént");
+        long a = bic.StopTime();
+        PrintPrice.setText(String.valueOf(a * 400));
     }
 
     @FXML
     void HandleSelectBicycle(ActionEvent event) {
+        String s, tipus = null, foglaltság = null, toltottseg = null;
         List<Bicicle> bicicles = new ArrayList<>();
         try (BicicleDAO bDAO = new JpaBicicleDAO();) {
             bicicles= bDAO.getBicicles();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        /*for (Bicicle num : bicicles) {
-            if(num.getBicicleID() == 1)
+        for (Bicicle num : bicicles) {
+            if(num.getBicicleID() == Integer.parseInt(SelectBicycle.getSelectionModel().getSelectedItem().toString()))
+            {
+                if (num.getAvailable() == 0)
+                    foglaltság = "foglalt";
+                else
+                    foglaltság = "szabad";
+                if(num.isType()) {
+                    tipus = "elektromos";
+                    toltottseg = String.valueOf(num.getCharge());
+                }else {
+                    tipus = "hagyomásnyos";
+                    toltottseg = "-";
+                }
+            }
+            VehicleInfo.setText("Tipusa: " + tipus + "\n" +
+                                "Elérhetőség: " + foglaltság + "\n" +
+                                "Töltöttsége: " + toltottseg + "\n"
+                                    );
         }
-        String s = */
     }
 
     @FXML
