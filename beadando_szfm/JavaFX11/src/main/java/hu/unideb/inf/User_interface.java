@@ -25,10 +25,60 @@ public class User_interface{
     int actual = 2;
 
     @FXML
+    private ComboBox<?> SelectFrom;
+
+    @FXML
+    private ComboBox<?> SelectHours1;
+
+    @FXML
+    private ComboBox<?> SelectWhere;
+
+    @FXML
+    private ComboBox<?> SelectMin1;
+
+    @FXML
+    private ComboBox<?> SelectMin2;
+
+    @FXML
+    private ComboBox<?> SelectHours2;
+
+    @FXML
+    void HandleSelectFrom(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HandleSelectHours1(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HandleSelectHours2(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HandleSelectMin1(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HandleSelectMin2(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HandleSelectWhere(ActionEvent event) {
+
+    }
+    @FXML
     private ComboBox SelectLocation;
 
     @FXML
     private Label ActualLocation;
+
+    @FXML
+    private Label VehicleInfo;
 
     @FXML
     private Label LocationInfo;
@@ -46,7 +96,7 @@ public class User_interface{
     private ComboBox SelectHours;
 
     @FXML
-    private Label PrintReserveTime;
+    private Label PrintPrice;
 
 
     @FXML
@@ -97,10 +147,6 @@ public class User_interface{
         min = SelectMin.getSelectionModel().getSelectedItem().toString();
     }
 
-    @FXML
-    void HandleOkButtonPushed(ActionEvent event) {
-        PrintReserveTime.setText("Idő kiválasztva");
-    }
 
     public void initializeBic()
     {

@@ -88,7 +88,6 @@ public class MainApp extends Application {
         }
         return false;
     }
-
     private static void startDatabase() throws SQLException {
         new Server().runTool("-tcp", "-web", "-ifNotExists");
     }
