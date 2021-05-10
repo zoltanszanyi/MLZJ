@@ -25,22 +25,22 @@ public class User_interface{
     int actual = 2;
 
     @FXML
-    private ComboBox<?> SelectFrom;
+    private ComboBox SelectFrom;
 
     @FXML
-    private ComboBox<?> SelectHours1;
+    private ComboBox SelectHours1;
 
     @FXML
-    private ComboBox<?> SelectWhere;
+    private ComboBox SelectWhere;
 
     @FXML
-    private ComboBox<?> SelectMin1;
+    private ComboBox SelectMin1;
 
     @FXML
-    private ComboBox<?> SelectMin2;
+    private ComboBox SelectMin2;
 
     @FXML
-    private ComboBox<?> SelectHours2;
+    private ComboBox SelectHours2;
 
     @FXML
     void HandleSelectFrom(ActionEvent event) {
@@ -180,6 +180,8 @@ public class User_interface{
             comboLoc.add(num.getName());
         }
         SelectLocation.setItems(comboLoc);
+        SelectFrom.setItems(comboLoc);
+        SelectWhere.setItems(comboLoc);
         /*-------------------------------------------------------------------------------*/
 
         /*----------------------------Minutes combobox---------------------------------*/
@@ -195,7 +197,8 @@ public class User_interface{
         for (String num : minutes) {
             comboMin.add(num);
         }
-        SelectMin.setItems(comboMin);
+        SelectMin1.setItems(comboMin);
+        SelectMin2.setItems(comboMin);
         /*-------------------------------------------------------------------------------*/
 
         /*----------------------------Hourses combobox---------------------------------*/
@@ -211,7 +214,8 @@ public class User_interface{
         for (String num : hourses) {
             comboHou.add(num);
         }
-        SelectHours.setItems(comboHou);
+        SelectHours1.setItems(comboHou);
+        SelectHours2.setItems(comboHou);
         /*-------------------------------------------------------------------------------*/
     }
 }
