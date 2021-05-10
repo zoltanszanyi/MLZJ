@@ -36,7 +36,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="LocationInfo" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="247.0" styleClass="user_box" stylesheets="@style.css" text="Helyszín infók" wrapText="true" GridPane.rowIndex="2">
+            <Label fx:id="LocationInfo" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="247.0" styleClass="user_box" stylesheets="@style.css" text="Helyszín infók" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
