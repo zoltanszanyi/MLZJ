@@ -86,7 +86,7 @@ public class User_interface{
                 LocationInfo.setText(num.getAddress());
                 Fullness.setText(String.valueOf(num.getFullness()) + "%" + "\n" + num.getNowin() +"/"+ num.getMax());
                 actual = num.getLocID();
-                initialize();
+                initializeBic();
             }
             Price.setText("Első fél óra ingyenes!\nHagyományos: 400ft/0,5 óra\nElektromos: 600ft/0,5 óra");
         }
@@ -102,21 +102,8 @@ public class User_interface{
         PrintReserveTime.setText("Idő kiválasztva");
     }
 
-    public void initialize() {
-        /*----------------------------Location combobox---------------------------------*/
-        ObservableList<String> comboLoc = FXCollections.observableArrayList();
-        List<Location> locName = new ArrayList<>();
-        try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
-            locName = lDAO.getLocations(); //felhasználó elmentése adatbázisba
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        for (Location num : locName) {
-            comboLoc.add(num.getName());
-        }
-        SelectLocation.setItems(comboLoc);
-        /*-------------------------------------------------------------------------------*/
-
+    public void initializeBic()
+    {
         /*----------------------------Bicycle combobox---------------------------------*/
         ObservableList<String> comboBic = FXCollections.observableArrayList();
         List<Bicicle> bicName = new ArrayList<>();
@@ -130,6 +117,23 @@ public class User_interface{
                 comboBic.add(String.valueOf(num.getBicicleID()));
         }
         SelectBicycle.setItems(comboBic);
+        /*-------------------------------------------------------------------------------*/
+
+    }
+
+    public void initialize() {
+        /*----------------------------Location combobox---------------------------------*/
+        ObservableList<String> comboLoc = FXCollections.observableArrayList();
+        List<Location> locName = new ArrayList<>();
+        try (LocationDAO lDAO = new JpaLocationDAO();) {  //try-with-resources   Adatbáziskezelő példányosítása a felhesználókhoz
+            locName = lDAO.getLocations(); //felhasználó elmentése adatbázisba
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        for (Location num : locName) {
+            comboLoc.add(num.getName());
+        }
+        SelectLocation.setItems(comboLoc);
         /*-------------------------------------------------------------------------------*/
 
         /*----------------------------Minutes combobox---------------------------------*/
