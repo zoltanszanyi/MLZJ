@@ -139,6 +139,12 @@ public class User_interface{
                         a.setNowin(a.getNowin() + 1);
                         a.setFullness();
                         num.setLocID(a.getLocID());
+                        if(num.isType()){
+                            num.setCharge(num.getCharge()-5*kül);
+                            num.setService(num.getService()-2*kül);
+                        }else
+                            num.setService(num.getService()-2*kül);
+
                         bDAO.updateBicicle(num);
                         lDAO.updateLocation(a);
                     }
@@ -202,6 +208,7 @@ public class User_interface{
                 LocationInfo.setText(num.getAddress());
                 Fullness.setText(String.valueOf(num.getFullness()) + "%" + "\n" + num.getNowin() +"/"+ num.getMax());
                 actual = num.getLocID();
+                SelectFrom.getSelectionModel().select(ActualLocation.getText());
                 initializeBic();
             }
             Price.setText("Első fél óra ingyenes!\nHagyományos: 400ft/0,5 óra\nElektromos: 600ft/0,5 óra");
