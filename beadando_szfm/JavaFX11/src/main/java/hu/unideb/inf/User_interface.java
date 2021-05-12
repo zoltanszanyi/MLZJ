@@ -108,10 +108,51 @@ public class User_interface{
 
     @FXML
     void HandleReserveButton(ActionEvent event) {
+        List<Bicicle> bicicles = new ArrayList<>();
+        List<Location> locations = new ArrayList<>();
         ReserveSuccessLabel.setTextFill(Color.color(0.1,0.1,0.1));
         ReserveSuccessLabel.setText("A lefoglalás sikeresen megtörtént");
-        long a = bic.StopTime();
-        PrintPrice.setText(String.valueOf(a * 400));
+        int ora1 = Integer.parseInt((String) SelectHours1.getSelectionModel().getSelectedItem()) * 60,
+                ora2 = Integer.parseInt((String) SelectHours2.getSelectionModel().getSelectedItem()) * 60,
+                perc1 = Integer.parseInt((String) SelectMin1.getSelectionModel().getSelectedItem()),
+                perc2 = Integer.parseInt((String) SelectMin2.getSelectionModel().getSelectedItem()),
+                kül = (ora1 + perc1) - (ora2 + perc2);
+                if(kül < 0)
+                    kül = (kül *(-1) - 30)/30;
+                if(Integer.parseInt((String) SelectBicycle.getSelectionModel().getSelectedItem()) >= 26)
+                    PrintPrice.setText(String.valueOf(kül * 600) + "Ft");
+                else
+                    PrintPrice.setText(String.valueOf(kül * 400) + "Ft");
+        try (BicicleDAO bDAO = new JpaBicicleDAO();) {
+            bicicles= bDAO.getBicicles();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try (LocationDAO lDAO = new JpaLocationDAO();) {
+            locations= lDAO.getLocations();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Bicicle updatebic = new Bicicle();
+        Location updateloc = new Location();
+        for (Bicicle num : bicicles) {
+            if (num.getBicicleID() == Integer.parseInt(SelectBicycle.getSelectionModel().getSelectedItem().toString())) {
+                for (Location a: locations) {
+                    if(a.getLocID() == num.getLocID())
+                        a.setNowin(a.getNowin()-1);
+                    if(a.getName().equals(SelectWhere.getSelectionModel().getSelectedItem().toString())) {
+                        a.setNowin(a.getNowin() + 1);
+                        num.setLocID(a.getLocID());
+                        updatebic = num;
+                        updateloc = a;
+                        BicicleDAO bDAO = new JpaBicicleDAO();
+                        LocationDAO lDAO = new JpaLocationDAO();
+                        bDAO.updateteBicicle(updatebic);
+                        lDAO.updateteLocation(updateloc);
+                    }
+                }
+            }
+        }
     }
 
     @FXML
