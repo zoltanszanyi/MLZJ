@@ -123,35 +123,30 @@ public class User_interface{
                     PrintPrice.setText(String.valueOf(kül * 600) + "Ft");
                 else
                     PrintPrice.setText(String.valueOf(kül * 400) + "Ft");
-        try (BicicleDAO bDAO = new JpaBicicleDAO();) {
+        try (BicicleDAO bDAO = new JpaBicicleDAO(); LocationDAO lDAO = new JpaLocationDAO();) {
             bicicles= bDAO.getBicicles();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try (LocationDAO lDAO = new JpaLocationDAO();) {
             locations= lDAO.getLocations();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Bicicle updatebic = new Bicicle();
-        Location updateloc = new Location();
+
         for (Bicicle num : bicicles) {
             if (num.getBicicleID() == Integer.parseInt(SelectBicycle.getSelectionModel().getSelectedItem().toString())) {
                 for (Location a: locations) {
-                    if(a.getLocID() == num.getLocID())
-                        a.setNowin(a.getNowin()-1);
+                    if(a.getLocID() == num.getLocID()) {
+                        a.setNowin(a.getNowin() - 1);
+                        a.setFullness();
+                        lDAO.updateLocation(a);
+                    }
                     if(a.getName().equals(SelectWhere.getSelectionModel().getSelectedItem().toString())) {
                         a.setNowin(a.getNowin() + 1);
+                        a.setFullness();
                         num.setLocID(a.getLocID());
-                        updatebic = num;
-                        updateloc = a;
-                        BicicleDAO bDAO = new JpaBicicleDAO();
-                        LocationDAO lDAO = new JpaLocationDAO();
-                        bDAO.updateteBicicle(updatebic);
-                        lDAO.updateteLocation(updateloc);
+                        bDAO.updateBicicle(num);
+                        lDAO.updateLocation(a);
                     }
                 }
             }
+        }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

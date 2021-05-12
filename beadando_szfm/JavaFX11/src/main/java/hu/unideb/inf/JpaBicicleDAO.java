@@ -26,7 +26,7 @@ public class JpaBicicleDAO implements BicicleDAO{
     }
 
     @Override
-    public void updateteBicicle(Bicicle b) {    //biciklik frissítése az adatbázisban
+    public void updateBicicle(Bicicle b) {    //biciklik frissítése az adatbázisban
         entityManager.getTransaction().begin();
         entityManager.persist(b);
         entityManager.getTransaction().commit();

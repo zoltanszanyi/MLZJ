@@ -26,7 +26,7 @@ public class JpaLocationDAO implements LocationDAO{
     }
 
     @Override
-    public void updateteLocation(Location l) {   //teleephely frissítése az adatbázisban
+    public void updateLocation(Location l) {   //teleephely frissítése az adatbázisban
         entityManager.getTransaction().begin();
         entityManager.persist(l);
         entityManager.getTransaction().commit();

@@ -26,7 +26,7 @@ public class JpaUsersDAO implements UsersDAO{
     }
 
     @Override
-    public void updateteUser(Users u) { //felhasználó frissítése == felhasználó mentése
+    public void updateUser(Users u) { //felhasználó frissítése == felhasználó mentése
         saveUser(u);
     }
 
