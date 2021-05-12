@@ -71,7 +71,6 @@ public class User_interface{
     void HandleSelectWhere(ActionEvent event) {
 
     }
-
     @FXML
     private ComboBox SelectLocation;
 
