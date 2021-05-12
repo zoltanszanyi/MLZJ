@@ -31,13 +31,10 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="ActualLocation" alignment="CENTER" prefHeight="78.0" prefWidth="385.0" styleClass="user_box" stylesheets="@style.css" text="Helyszín neve" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Label fx:id="ActualLocation" alignment="CENTER" prefHeight="78.0" prefWidth="385.0" styleClass="user_box" stylesheets="@style.css" text="Helyszín neve" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
             </Label>
             <Label fx:id="LocationInfo" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="247.0" styleClass="user_box" stylesheets="@style.css" text="Helyszín infók" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                <font>
@@ -51,10 +48,21 @@
             </Label>
             <Label fx:id="Price" alignment="CENTER" contentDisplay="CENTER" prefHeight="101.0" prefWidth="233.0" styleClass="user_box" stylesheets="@style.css" text="Árak" wrapText="true" GridPane.rowIndex="4">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="PrintPrice" alignment="CENTER" prefHeight="91.0" prefWidth="361.0" styleClass="user_box" stylesheets="@style.css" text="Várható ár" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <Label alignment="TOP_CENTER" prefHeight="39.0" prefWidth="361.0" stylesheets="@style.css" text="Adja meg hogy mikor szeretné lefoglalni a biciklit" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="PrintReserveTime" alignment="CENTER" prefHeight="91.0" prefWidth="361.0" styleClass="user_box" stylesheets="@style.css" text="A foglalás érvényessége: idő - idő" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -76,57 +84,23 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" styleClass="user_box" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ComboBox fx:id="SelectBicycle" onAction="#HandleSelectBicycle" prefHeight="20.0" prefWidth="179.0" promptText="Válasszon egy biciklit" styleClass="user_box" stylesheets="@style.css">
-                     <padding>
-                        <Insets left="1.0" />
-                     </padding>
+                  <ComboBox fx:id="SelectBicycle" onAction="#HandleSelectBicycle" prefHeight="25.0" prefWidth="181.0" promptText="Válasszon egy biciklit" styleClass="user_box" stylesheets="@style.css">
                      <VBox.margin>
-                        <Insets left="91.0" />
+                        <Insets left="88.0" top="21.0" />
                      </VBox.margin>
                   </ComboBox>
-                  <Label fx:id="VehicleInfo" alignment="CENTER" text="Jármű infó" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="131.0" top="4.0" />
-                     </VBox.margin>
-                  </Label>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" styleClass="user_box" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <ComboBox fx:id="SelectFrom" onAction="#HandleSelectFrom" prefHeight="29.0" prefWidth="101.0" promptText="Honnan" styleClass="user_box" stylesheets="@style.css">
+                  <ComboBox fx:id="SelectMin" onAction="#HandleSelectMin" prefHeight="27.0" prefWidth="70.0" promptText="Perc" styleClass="user_box" stylesheets="@style.css">
                      <VBox.margin>
-                        <Insets left="38.0" top="2.0" />
+                        <Insets left="149.0" top="39.0" />
                      </VBox.margin>
                   </ComboBox>
-                  <ComboBox fx:id="SelectHours1" onAction="#HandleSelectHours1" prefHeight="27.0" prefWidth="70.0" promptText="Óra" styleClass="user_box" stylesheets="@style.css">
+                  <ComboBox fx:id="SelectHours" onAction="#HandleSelectHours" prefHeight="27.0" prefWidth="70.0" promptText="Óra" styleClass="user_box" stylesheets="@style.css">
                      <VBox.margin>
-                        <Insets bottom="1.0" left="11.0" top="9.0" />
-                     </VBox.margin>
-                  </ComboBox>
-                  <ComboBox fx:id="SelectWhere" onAction="#HandleSelectWhere" prefHeight="29.0" prefWidth="101.0" promptText="Hová" styleClass="user_box" stylesheets="@style.css">
-                     <VBox.margin>
-                        <Insets bottom="1.0" left="215.0" top="-71.0" />
-                     </VBox.margin>
-                  </ComboBox>
-                  <ComboBox fx:id="SelectMin1" onAction="#HandleSelectMin1" prefHeight="27.0" prefWidth="70.0" promptText="Perc" styleClass="user_box" stylesheets="@style.css">
-                     <VBox.margin>
-                        <Insets left="93.0" top="9.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="-1.0" />
-                     </padding>
-                  </ComboBox>
-                  <ComboBox fx:id="SelectMin2" onAction="#HandleSelectMin2" prefHeight="27.0" prefWidth="70.0" promptText="Perc" styleClass="user_box" stylesheets="@style.css">
-                     <VBox.margin>
-                        <Insets left="273.0" top="-30.0" />
-                     </VBox.margin>
-                  </ComboBox>
-                  <ComboBox fx:id="SelectHours2" onAction="#HandleSelectHours2" prefHeight="27.0" prefWidth="70.0" promptText="Óra" styleClass="user_box" stylesheets="@style.css">
-                     <VBox.margin>
-                        <Insets left="191.0" top="-29.0" />
+                        <Insets left="64.0" top="-30.0" />
                      </VBox.margin>
                   </ComboBox>
                </children>
@@ -141,7 +115,7 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                      <VBox.margin>
-                        <Insets left="132.0" top="11.0" />
+                        <Insets left="132.0" top="6.0" />
                      </VBox.margin>
                   </Button>
                   <Label fx:id="ReserveSuccessLabel" alignment="CENTER" prefHeight="17.0" prefWidth="381.0">
