@@ -103,6 +103,11 @@
                         <Insets left="64.0" top="-30.0" />
                      </VBox.margin>
                   </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#HandleOkButtonPushed" prefHeight="29.0" prefWidth="37.0" styleClass="user_box" stylesheets="@style.css" text="Ok">
+                     <VBox.margin>
+                        <Insets left="268.0" top="-29.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
                <padding>
                   <Insets top="1.0" />

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\LocationDAO.java
 C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\JpaLocationDAO.java
 C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\Bicicle.java
@@ -15,21 +14,3 @@ C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\uni
 C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\JpaUsersDAO.java
 C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\MainApp.java
 C:\Users\bence\Documents\GitHub\MLZJ\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\MainAppTest.java
-=======
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\JpaUsersDAO.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\UsersDAO.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\JpaBicicleDAO.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\Customer.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\MainApp.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\JpaLocationDAO.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\UsersTest.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\Location.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\BicicleDAO.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\MainAppTest.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\LocationDAO.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\User_interface.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\Bicicle.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\Users.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\Application.java
-D:\most\beadando_szfm\JavaFX11\src\main\java\hu\unideb\inf\FXMLBelepes.java
->>>>>>> Stashed changes
